@@ -19,7 +19,7 @@ const Header = () => {
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
 
-                className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>Hi! I'm Ahmad Ali <Image src={assets.hand_icon} alt='profile' className='w-6' /></motion.h3>
+                className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>Hi! I'm Ahmad Ali</motion.h3>
 
             <motion.h1
                 initial={{ opacity: 0 }}
