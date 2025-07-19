@@ -44,7 +44,7 @@
 
 <h1>🌐 Live Demo</h1>
 
-🖥️ <a href="https://dev-ahmad-ali.vercel.app/" target="_blank">My Portfolio</a>
+🖥️ Here is the live demo of my portfolio <a href="https://dev-ahmad-ali.vercel.app/" target="_blank">My Portfolio</a>
 
 <hr>
 
