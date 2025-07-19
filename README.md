@@ -1,3 +1,53 @@
+<h1>💼 Ahmad's Portfolio Website</h1>
+
+<p>A sleek, modern, and fully responsive personal portfolio website built using Next.js, Tailwind CSS, and Framer Motion. This site showcases my web development skills, professional journey, and selected projects with smooth animations and a clean UI/UX.</p>
+
+<h1>🚀 Tech Stack</h1>
+
+<ul>
+  <li><strong>Next.js</strong> – React-based framework for fast and SEO-friendly web apps</li>
+  <li><strong>Tailwind CSS</strong> – Utility-first CSS framework for rapid UI development</li>
+  <li><strong>Framer Motion</strong> – Animation library for smooth and interactive transitions</li>
+</ul>
+
+<h1>🎯 Features</h1>
+
+<ul>
+  <li>⚡ Fast, responsive, and SEO-optimized</li>
+  <li>🎨 Styled entirely with Tailwind CSS utility classes</li>
+  <li>🎞️ Smooth animations using Framer Motion (Motion)</li>
+  <li>🧩 Clean, modular, and scalable component structure</li>
+  <li>🌙 Dark mode support (if applicable)</li>
+  <li>🖥️ Fully responsive design across all devices</li>
+</ul>
+
+<h1>🛠️ Installation & Development</h1>
+
+<h3>1. Clone the Repository</h3>
+
+<code>git clone <a href="https://github.com/AhmadAli-68/My-Portfolio">https://github.com/AhamdAli-68/your-portfolio.git</a></code>
+<br>
+<code>cd your-portfolio</code>
+
+<h3>2. Install Dependencies</h3>
+
+<code>npm install</code>
+
+<h3>3. Start the Development Server</h3>
+
+<code>npm run dev</code>
+
+<h3>4. Build for Production</h3>
+
+<code>npm run build</code>
+<code>npm run start</code>
+
+<h1>🌐 Live Demo</h1>
+
+🖥️ <a href="https://dev-ahmad-ali.vercel.app/" target="_blank">My Portfolio</a>
+
+<hr>
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
