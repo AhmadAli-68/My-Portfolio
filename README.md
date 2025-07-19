@@ -27,7 +27,7 @@
 
 <code>git clone <a href="https://github.com/AhmadAli-68/My-Portfolio.git" target="_blank">https://github.com/AhamdAli-68/My-Portfolio.git</a></code>
 <br>
-<code>cd your-portfolio</code>
+<code>cd My-Portfolio</code>
 
 <h3>2. Install Dependencies</h3>
 
