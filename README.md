@@ -25,7 +25,7 @@
 
 <h3>1. Clone the Repository</h3>
 
-<code>git clone <a href="https://github.com/AhmadAli-68/My-Portfolio/" target="_blank">https://github.com/AhamdAli-68/your-portfolio.git</a></code>
+<code>git clone <a href="https://github.com/AhmadAli-68/My-Portfolio/" target="_blank">https://github.com/AhamdAli-68/My-Portfolio.git</a></code>
 <br>
 <code>cd your-portfolio</code>
 
