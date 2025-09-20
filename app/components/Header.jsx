@@ -55,7 +55,7 @@ const Header = () => {
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 1.2 }}
 
-                    href="/Ahmad-Resume-[Full-Stack-Web-Developer].docx" download
+                    href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
                     className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white'
                 >
                     My Resume <Image src={assets.download_icon} alt='profile' className='w-4' /></motion.a>
