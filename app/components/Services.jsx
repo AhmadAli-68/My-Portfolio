@@ -31,7 +31,7 @@ const Services = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
 
-                className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>I am a full stack developer from Lahore, Pakistan with 1 year of experience in multiple companies Like Nexskill - Be Productive and P2P Clouds.</motion.p>
+                className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>I am a full stack developer from Lahore, Pakistan with 1 year of experience in multiple companies Like NexSkill - Be Productive and P2P Clouds.</motion.p>
 
             <motion.div
                 initial={{ opacity: 0 }}
@@ -44,10 +44,10 @@ const Services = () => {
                         whileHover={{ scale: 1.05 }}
 
                         key={index}
-                        className='border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black duration-500 hover:bg-lighthover cursor-pointer hover:-translate-y-1 dark:hover:bg-darkHover dark:hover:shadow-white'
+                        className='border border-gray-300 rounded-lg px-8 py-12 hover:shadow-black duration-500 hover:bg-lightHover cursor-pointer hover:-translate-y-1 dark:hover:bg-darkHover dark:hover:shadow-white'
                     >
                         <Image src={icon} alt='icon' className='w-10' />
-                        <h3 className='text-lg my-4 text-gray-700 dark:text-white'>{title}</h3>
+                        <h3 className='text-lg my-4 text-gray-700 dark:text-gray-400'>{title}</h3>
                         <p className='text-sm text-gray-600 leading-5 dark:text-white/80'>{description}</p>
                         <a href={link} className='flex items-center gap-2 text-sm mt-5'>
                             Read more <Image src={assets.right_arrow} alt='right-arrow' className='w-4' />

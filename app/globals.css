@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-lighthover: #fcf4ff;
-  --color-darkHover: #2a004a;
-  --color-darkTheme: #11001f;
+  --color-lightHover: #fcf4ff;
+  --color-darkHover: #1c2536;
+  --color-darkTheme: #101828;
 
-  --font-Outfit: Outfit, sans-serif;
-  --font-Ovo: Ovo, serif;
+  /* --font-Outfit: Outfit, sans-serif;
+  --font-Ovo: Ovo, serif; */
+
+  --font-georama: 'Georama', sans-serif;
+  --font-roboto: 'Roboto Mono', monospace;
 
   --shadow-black: 4px 4px 0 #000;
   --shadow-white: 4px 4px 0 #fff;
@@ -17,5 +22,5 @@
 }
 
 * {
-  font-family: Outfit;
+  font-family: georama;
 }

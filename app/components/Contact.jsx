@@ -56,7 +56,7 @@ const Contact = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
 
-                className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>I'd love to hear from you! If you have any questions, comments, or feedback, please fill the form below</motion.p>
+                className='text-center max-w-2xl mx-auto mt-5 mb-12 font-georama'>I'd love to hear from you! If you have any questions, comments, or feedback, please fill the form below</motion.p>
 
             <motion.form
                 initial={{ opacity: 0 }}
@@ -72,7 +72,7 @@ const Contact = () => {
                         transition={{ duration: 0.6, delay: 1.1 }}
 
                         type="text"
-                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90'
+                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-gray-300'
                         placeholder='Enter your name' name='name' required />
 
                     <motion.input
@@ -81,7 +81,7 @@ const Contact = () => {
                         transition={{ duration: 0.6, delay: 1.2 }}
 
                         type="email"
-                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90'
+                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-gray-300'
                         placeholder='Enter your email' name='email' required />
                 </div>
 
@@ -91,7 +91,7 @@ const Contact = () => {
                     transition={{ duration: 0.6, delay: 1.3 }}
 
                     rows='6'
-                    className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90'
+                    className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-gray-300'
                     placeholder='Enter your message'
                     name='message'
                     required></motion.textarea>

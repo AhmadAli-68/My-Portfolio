@@ -1,67 +1,152 @@
-import React from 'react'
+import { useRef } from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import { motion } from 'motion/react'
 
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+
+const FONT_WEIGHTS = {
+	subtitle: { min: 100, max: 400, default: 100 },
+	title: { min: 400, max: 900, default: 400 }
+}
+
+const renderText = (text, className, baseWeight = 400) => {
+	return [...text].map((char, i) => (
+		<span
+			key={i}
+			className={className}
+			style={{ fontVariationSettings: `'wght' ${baseWeight}` }}
+		>
+			{char === ' ' ? '\u00A0' : char}
+		</span>
+	))
+}
+
+const setupTextHover = (container, type) => {
+	if (!container) return () => { };
+
+	const letters = container.querySelectorAll('span')
+	const { min, max, default: base } = FONT_WEIGHTS[type]
+
+	const animateLetter = (letter, weight, duration = 0.25) => {
+		return gsap.to(letter, {
+			duration,
+			ease: 'power2.out',
+			fontVariationSettings: `'wght' ${weight}`
+		})
+	}
+
+	const handleMouseMove = (e) => {
+		const { left } = container.getBoundingClientRect()
+		const mouseX = e.clientX - left
+
+		letters.forEach((letter) => {
+			const { left: l, width: w } = letter.getBoundingClientRect()
+			const distance = Math.abs(mouseX - (l - left + w / 2))
+			const intensity = Math.exp(-(distance ** 2) / 20000)
+
+			animateLetter(letter, min + (max - min) * intensity);
+		})
+	}
+
+	const handleMouseLeave = () =>
+		letters.forEach((letter) =>
+			animateLetter(letter, base, 0.3))
+
+	container.addEventListener('mousemove', handleMouseMove)
+	container.addEventListener('mouseleave', handleMouseLeave)
+
+	return () => {
+		container.removeEventListener('mousemove', handleMouseMove)
+		container.removeEventListener('mouseleave', handleMouseLeave)
+	}
+}
+
 const Header = () => {
-    return (
-        <div className='w-11/12 mx-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
-            <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-            >
-                <Image src={assets.profile_img} alt='profile' className='rounded-full w-32' />
-            </motion.div>
+	const titleRef = useRef(null);
+	const subtitleRef = useRef(null);
 
-            <motion.h3
-                initial={{ y: -30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
+	useGSAP(() => {
+		const titleCleanup = setupTextHover(titleRef.current, 'title')
+		const subtitleCleanup = setupTextHover(subtitleRef.current, 'subtitle')
 
-                className='flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo'>Hi! I'm Ahmad Ali</motion.h3>
+		return () => {
+			titleCleanup()
+			subtitleCleanup()
+		}
+	}, [])
 
-            <motion.h1
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+	return (
+		<div className='w-full max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+			<motion.div
+				initial={{ scale: 0 }}
+				whileInView={{ scale: 1 }}
+				transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+			>
+				<Image src={assets.profile_img} alt='profile' className='rounded-full w-32' />
+			</motion.div>
 
-                className='text-3xl sm:text-6xl lg:text-[66px] font-Ovo'>
-                full stack developer based in Pakistan.
-            </motion.h1>
+			<motion.h3
+				initial={{ y: -30, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ duration: 0.8, delay: 0.5 }}
 
-            <motion.p
-                initial={{ y: -20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+				className='flex items-end text-xl md:text-2xl mb-3 select-none'
+				ref={subtitleRef}
+			>
+				{renderText(
+					`Hey! I'm Ahmad Ali`,
+					`text-3xl font-georama`
+				)}
+			</motion.h3>
 
-                className='max-w-2xl mx-auto font-Ovo'>
-                I am a full stack developer from Lahore, Pakistan with 1+ year of experience in full stack development.
-            </motion.p>
+			<motion.h1
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				transition={{ duration: 0.6, delay: 0.7 }}
 
-            <div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
-                <motion.a
-                    initial={{ y: 30, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1 }}
+				className='text-4xl md:text-6xl lg:text-7xl font-georama select-none'
+				ref={titleRef}
+			>
+				{renderText(
+					`Full Stack Web Developer.`,
+					`italic font-georama`
+				)}
+			</motion.h1>
 
-                    href="#contact"
-                    className='px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
-                >
-                    Contact me <Image src={assets.right_arrow_white} alt='profile' className='w-4' /></motion.a>
+			<motion.p
+				initial={{ y: -20, opacity: 0 }}
+				whileInView={{ y: 0, opacity: 1 }}
+				transition={{ duration: 0.6, delay: 0.3 }}
 
-                <motion.a
-                    initial={{ y: 30, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
+				className='max-w-2xl mb- mx-auto font-georama'>
+				I am a Full Stack Web Developer from Lahore, Pakistan with 2+ year of experience in full stack development.
+			</motion.p>
 
-                    href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
-                    className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white'
-                >
-                    My Resume <Image src={assets.download_icon} alt='profile' className='w-4' /></motion.a>
-            </div>
-        </div >
-    )
+			<div className='flex flex-col sm:flex-row items-center gap-4 mt-4'>
+				<motion.a
+					initial={{ y: 30, opacity: 0 }}
+					whileInView={{ y: 0, opacity: 1 }}
+					transition={{ duration: 0.6, delay: 1 }}
+
+					href="#contact"
+					className='px-10 py-3 border border-gray-300 rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
+				>
+					Contact me <Image src={assets.right_arrow_white} alt='profile' className='w-4' /></motion.a>
+
+				<motion.a
+					initial={{ y: 30, opacity: 0 }}
+					whileInView={{ y: 0, opacity: 1 }}
+					transition={{ duration: 0.6, delay: 1.2 }}
+
+					href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
+					className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white'
+				>
+					My Resume <Image src={assets.download_icon} alt='profile' className='w-4' /></motion.a>
+			</div>
+		</div >
+	)
 }
 
 export default Header
