@@ -1,9 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'motion/react'
-import { assets, infoList, toolsData } from '@/assets/assets'
+import { assets, infoList, techLogos } from '@/assets/assets'
+import LogoLoop from './LogoLoop';
 
-const About = ({ isDarkMode }) => {
+const About = () => {
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -76,22 +77,23 @@ const About = ({ isDarkMode }) => {
 
 						className='my-6 font-georama text-secondary'>Languages and Tools</motion.h4>
 
-					<motion.ul
-						initial={{ opacity: 0 }}
-						whileInView={{ opacity: 1 }}
-						transition={{ duration: 0.6, delay: 1.5 }}
-
-						className='flex items-center gap-3 sm:gap-5'>
-						{toolsData.map((tool, index) => (
-							<motion.li
-								whileHover={{ scale: 1.1 }}
-
-								className='flex items-center justify-center w-12 sm:w-14 aspect-square border-[0.5px] border-darkBorder rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
-								key={index}>
-								<Image src={tool} alt='tool' className='w-5 sm:w-7' />
-							</motion.li>
-						))}
-					</motion.ul>
+					<div
+						className='flex justify-center items-center absolute mx-auto h-auto overflow-hidden max-w-2xl max-md:max-w-3/4 max-sm:max-w-[375px]'
+					>
+						<LogoLoop
+							logos={techLogos}
+							
+							speed={80}
+							direction="left"
+							logoHeight={40}
+							gap={40}
+							hoverSpeed={0}
+							scaleOnHover
+							fadeOut
+							fadeOutColor="#040d12"
+							ariaLabel="Languages and Tools"
+						/>
+					</div>
 				</motion.div>
 			</motion.div>
 		</motion.div>

@@ -1,6 +1,6 @@
 import { useEffect, useRef, memo } from 'react';
 
-import '../DotField.css'
+import '../css/DotField.css'
 
 const TWO_PI = Math.PI * 2;
 

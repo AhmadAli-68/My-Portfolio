@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
       <body
-        className={`${georama.className} ${roboto.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
+        className={`${georama.className} ${roboto.className} antialiased leading-8 overflow-x-hidden bg-darkTheme text-white`}
       >
         {children}
       </body>
