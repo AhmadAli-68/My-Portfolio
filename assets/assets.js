@@ -28,9 +28,11 @@ import web_icon from './web-icon.png'
 import version_control_icon from './version-control-icon.png'
 import database_icon from './database-icon.png'
 
-import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiMongodb, SiMysql, SiExpress, SiNodedotjs, SiRedux, SiHtml5, SiCss, SiGit, SiGithub, SiPostman, SiFirebase, SiVercel, SiNetlify, SiBootstrap, SiPython } from 'react-icons/si';
+import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiMongodb, SiExpress, SiNodedotjs, SiRedux, SiHtml5, SiCss, SiGit, SiGithub, SiPostman, SiVercel, SiNetlify, SiBootstrap, SiPython } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
 import { TbBrandVite } from 'react-icons/tb';
+import { IoLogoFirebase } from 'react-icons/io5';
+import { GrMysql } from 'react-icons/gr';
 
 export const assets = {
 	user_image,
@@ -112,7 +114,7 @@ export const techLogos = [
 	{ node: <SiJavascript />, title: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
 	{ node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
 	{ node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com/" },
-	{ node: <SiMysql />, title: "MySQL", href: "https://www.mysql.com/" },
+	{ node: <GrMysql />, title: "MySQL", href: "https://www.mysql.com/" },
 	{ node: <SiExpress />, title: "Express", href: "https://expressjs.com/" },
 	{ node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org/en" },
 	{ node: <SiReact />, title: "React", href: "https://react.dev" },
@@ -125,7 +127,7 @@ export const techLogos = [
 	{ node: <SiGit />, title: "Git", href: "https://git-scm.com/" },
 	{ node: <SiGithub />, title: "GitHub", href: "https://github.com/" },
 	{ node: <SiPostman />, title: "Postman", href: "https://www.postman.com/" },
-	{ node: <SiFirebase />, title: "Firebase", href: "https://firebase.google.com/" },
+	{ node: <IoLogoFirebase />, title: "Firebase", href: "https://firebase.google.com/" },
 	{ node: <VscVscode />, title: "VScode", href: "https://code.visualstudio.com/" },
 	{ node: <TbBrandVite />, title: "Vite", href: "https://tailwindcss.com" },
 	{ node: <SiVercel />, title: "Vercel", href: "https://vite.dev/" },

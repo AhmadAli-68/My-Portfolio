@@ -87,12 +87,12 @@ const Header = () => {
 					dotSpacing={14}
 					bulgeStrength={67}
 					glowRadius={0}
-					sparkle={false}
+					sparkle={true}
 					waveAmplitude={0}
 					cursorRadius={500}
 					cursorForce={0.1}
 					bulgeOnly={true}
-					gradientFrom="#040D12"
+					gradientFrom="#183D3D"
 					gradientTo="#4E9F3D"
 				/>
 			</div>
