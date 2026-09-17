@@ -80,7 +80,7 @@ const Header = () => {
 	}, [])
 
 	return (
-		<div className='w-full bg-none text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+		<div className='w-full bg-none text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 border-b-[0.5px] border-darkBorder'>
 			<div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: -1 }}>
 				<DotField
 					dotRadius={1.5}
