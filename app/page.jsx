@@ -6,7 +6,7 @@ import Services from "./components/Services";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
+import { Toaster } from 'react-hot-toast';
 
 export default function Home() {
   // const [isDarkMode, setIsDarkMode] = useState(false)
@@ -31,6 +31,29 @@ export default function Home() {
 
   return (
     <>
+      <Toaster
+        position='top-center'
+        toastOptions={{
+          style: {
+            backgroundColor: '#040D12',
+            color: '#ffffff',
+            border: '0.5px solid #183D3D',
+            borderRadius: '12px',
+            padding: '16px'
+          },
+          duration: 3000,
+
+          error: {
+            style: {
+              backgroundColor: '#BF092F',
+              color: '#ffffff',
+              border: '0.5px solid #C3110C',
+              borderRadius: '12px',
+              padding: '16px'
+            }
+          }
+        }}
+      />
       <Navbar />
       <Header />
       <About />
