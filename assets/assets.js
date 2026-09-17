@@ -17,16 +17,16 @@ import header_bg_color from './header-bg-color.png';
 import sun_icon from './sun_icon.png';
 import menu_black from './menu-black.png';
 import menu_white from './menu-white.png';
-import web_icon from './web-icon.png';
-import mobile_icon from './mobile-icon.png';
-import ui_icon from './ui-icon.png';
-import graphics_icon from './graphics-icon.png';
 import right_arrow from './right-arrow.png';
 import send_icon from './send-icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import next_js from './nextjs.png';
 import react from './react.png';
+import api_icon from './api-icon.png'
+import web_icon from './web-icon.png'
+import version_control_icon from './version-control-icon.png'
+import database_icon from './database-icon.png'
 
 import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiMongodb, SiMysql, SiExpress, SiNodedotjs, SiRedux, SiHtml5, SiCss, SiGit, SiGithub, SiPostman, SiFirebase, SiVercel, SiNetlify, SiBootstrap, SiPython } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
@@ -53,15 +53,15 @@ export const assets = {
 	menu_black,
 	menu_white,
 	next_js,
-	web_icon,
-	mobile_icon,
-	ui_icon,
-	graphics_icon,
 	right_arrow,
 	send_icon,
 	right_arrow_bold,
 	right_arrow_bold_dark,
-	react
+	react,
+	api_icon,
+	database_icon,
+	version_control_icon,
+	web_icon
 };
 
 export const workData = [
@@ -93,9 +93,9 @@ export const workData = [
 
 export const serviceData = [
 	{ icon: assets.web_icon, title: 'Web design', description: 'Web design is the process of planning, conceptualizing, and arranging content online. It combines aesthetics with functionality and better UI.', link: '' },
-	{ icon: assets.mobile_icon, title: 'Backend Development', description: 'Backend development focuses on server-side logic, databases, and APIs to ensure seamless communication between the frontend and the server.', link: '' },
-	{ icon: assets.ui_icon, title: 'Version Control', description: 'Version control is the practice of tracking and managing changes to code. It enables multiple developers to collaborate, maintain history.', link: '' },
-	{ icon: assets.graphics_icon, title: 'API Integration', description: 'API integration enables applications to connect with external systems, exchange data, and extend functionality efficiently.', link: '' },
+	{ icon: assets.database_icon, title: 'Backend Development', description: 'Backend development focuses on server-side logic, databases, and APIs to ensure seamless communication between the frontend and the server.', link: '' },
+	{ icon: assets.version_control_icon, title: 'Version Control', description: 'Version control is the practice of tracking and managing changes to code. It enables multiple developers to collaborate, maintain history.', link: '' },
+	{ icon: assets.api_icon, title: 'API Integration', description: 'API integration enables applications to connect with external systems, exchange data, and extend functionality efficiently.', link: '' },
 ]
 
 export const infoList = [
