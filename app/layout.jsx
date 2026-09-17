@@ -1,5 +1,8 @@
-import { Georama, Roboto } from "next/font/google";
+import { Georama, Roboto, Geist } from "next/font/google";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const georama = Georama({
   variable: '--font-georama',
@@ -21,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className={cn("scroll-smooth", "font-sans", geist.variable)}>
       <body
         className={`${georama.className} ${roboto.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}
       >

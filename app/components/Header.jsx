@@ -5,6 +5,8 @@ import { motion } from 'motion/react'
 
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import DotField from './DotField'
+import { ArrowRight, DownloadIcon } from 'lucide-react'
 
 const FONT_WEIGHTS = {
 	subtitle: { min: 100, max: 400, default: 100 },
@@ -78,7 +80,23 @@ const Header = () => {
 	}, [])
 
 	return (
-		<div className='w-full max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+		<div className='w-full bg-none text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
+			<div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: -1 }}>
+				<DotField
+					dotRadius={1.5}
+					dotSpacing={14}
+					bulgeStrength={67}
+					glowRadius={0}
+					sparkle={false}
+					waveAmplitude={0}
+					cursorRadius={500}
+					cursorForce={0.1}
+					bulgeOnly={true}
+					gradientFrom="#040D12"
+					gradientTo="#4E9F3D"
+				/>
+			</div>
+
 			<motion.div
 				initial={{ scale: 0 }}
 				whileInView={{ scale: 1 }}
@@ -92,7 +110,7 @@ const Header = () => {
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.8, delay: 0.5 }}
 
-				className='flex items-end text-xl md:text-2xl mb-3 select-none'
+				className='flex items-end text-secondary text-xl md:text-2xl mb-3 select-none'
 				ref={subtitleRef}
 			>
 				{renderText(
@@ -106,7 +124,7 @@ const Header = () => {
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.7 }}
 
-				className='text-4xl md:text-6xl lg:text-7xl font-georama select-none'
+				className='text-4xl md:text-6xl text-primary lg:text-7xl font-georama select-none'
 				ref={titleRef}
 			>
 				{renderText(
@@ -131,9 +149,9 @@ const Header = () => {
 					transition={{ duration: 0.6, delay: 1 }}
 
 					href="#contact"
-					className='px-10 py-3 border border-gray-300 rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent'
+					className='px-10 py-3 border border-darkBorder rounded-full bg-darkTheme text-white flex items-center gap-2 hover:text-hoverText transition-all duration-300 ease-in-out'
 				>
-					Contact me <Image src={assets.right_arrow_white} alt='profile' className='w-4' /></motion.a>
+					Contact me <ArrowRight alt='profile' className='w-5' /></motion.a>
 
 				<motion.a
 					initial={{ y: 30, opacity: 0 }}
@@ -141,9 +159,9 @@ const Header = () => {
 					transition={{ duration: 0.6, delay: 1.2 }}
 
 					href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
-					className='px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 dark:text-black bg-white'
+					className='px-10 py-3 rounded-full flex items-center gap-2 text-black bg-primary hover:bg-darkHover hover:text-hoverText transition-all duration-300 ease-in-out'
 				>
-					My Resume <Image src={assets.download_icon} alt='profile' className='w-4' /></motion.a>
+					My Resume <DownloadIcon className='w-5' /></motion.a>
 			</div>
 		</div >
 	)

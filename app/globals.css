@@ -2,15 +2,19 @@
 
 @import "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
 
 @theme {
   --color-lightHover: #fcf4ff;
-  --color-darkHover: #1c2536;
-  --color-darkTheme: #101828;
+  --color-darkBorder: #183D3D;
+  --color-darkTheme: #040D12;
 
-  /* --font-Outfit: Outfit, sans-serif;
-  --font-Ovo: Ovo, serif; */
+  --color-primary: #408A71;
+  
+  --color-darkHover: #285A48;
+  --color-hoverText: #B0E4CC;
+
+  --color-secondary: #B0E4CC;
 
   --font-georama: 'Georama', sans-serif;
   --font-roboto: 'Roboto Mono', monospace;

@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
+import { ArrowUpRight, X } from 'lucide-react'
 
-const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+const Navbar = () => {
 
 	const [isScroll, setIsScroll] = useState(false)
 	const sideMenuRef = useRef()
@@ -25,48 +26,41 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
 	return (
 		<>
-			<div className='fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden'>
-				<Image src={assets.header_bg_color} alt='bg' className='w-full' />
-			</div>
-
-			<nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm dark:bg-darkTheme dark:shadow-lightHover/20" : ""}`}>
+			<nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between  z-50 ${isScroll ? "bg-darkTheme/50 backdrop-blur-lg shadow-md dark:bg-darkTheme dark:shadow-primary/20" : ""}`}>
 				<a href="#top">
-					<Image src={isDarkMode ? assets.logo_dark : assets.logo} alt='logo' className='w-28 cursor-pointer mr-14' />
+					<Image src={assets.logo_dark} alt='logo' loading='eager' className='w-32 cursor-pointer mr-14' />
 				</a>
 
-				<ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white/50 shadow-sm dark:border dark:border-gray-300 dark:bg-transparent"} `}>
-					<li><a className='font-georama dark:text-gray-400 dark:hover:text-white transition-all' href="#top">Home</a></li>
-					<li><a className='font-georama dark:text-gray-400 dark:hover:text-white transition-all' href="#about">About Me</a></li>
-					<li><a className='font-georama dark:text-gray-400 dark:hover:text-white transition-all' href="#services">Services</a></li>
-					<li><a className='font-georama dark:text-gray-400 dark:hover:text-white transition-all' href="#work">My Work</a></li>
-					<li><a className='font-georama dark:text-gray-400 dark:hover:text-white transition-all' href="#contact">Contact Me</a></li>
+				<ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-darkTheme/50  backdrop-blur-lg shadow-sm border-[0.5px] border-darkBorder"} `}>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#top">Home</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#about">About Me</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#services">Services</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#work">My Work</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#contact">Contact Me</a></li>
 				</ul>
 
 				<div className='flex items-center gap-4'>
-					<button onClick={() => setIsDarkMode(prev => !prev)}>
-						<Image src={isDarkMode ? assets.sun_icon : assets.moon_icon} alt='moon' className='w-6 cursor-pointer' />
-					</button>
 
-					<a className='hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-300 rounded-full ml-4 hover:bg-[#1c2536] transition-all' href="#contact">Contact <Image src={isDarkMode ? assets.arrow_icon_dark : assets.arrow_icon} alt='arrow' className='w-3' /></a>
+					<a className='hidden lg:flex items-center gap-3 px-10 py-2.5 bg-darkTheme/50 backdrop-blur-lg border border-darkBorder hover:text-hoverText rounded-full ml-4 transition-all duration-300 ease-in-out' href="#contact">Contact <ArrowUpRight alt='arrow' className='w-5' /></a>
 
 					<button className='block md:hidden ml-3' onClick={openMenu}>
-						<Image src={isDarkMode ? assets.menu_white : assets.menu_black} alt='menu' className='w-6 cursor-pointer' />
+						<Image src={assets.menu_white} alt='menu' className='w-11 cursor-pointer bg-darkTheme border-[0.5px] border-darkBorder p-2 rounded-lg' />
 					</button>
 				</div>
 
 				{/* - ------- mobile menu ------- - */}
 
-				<ul ref={sideMenuRef} className='flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 dark:bg-darkHover dark:text-white'>
+				<ul ref={sideMenuRef} className='flex md:hidden flex-col gap-3 py-20 px-4 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-darkTheme transition duration-500 text-white'>
 
 					<div className='absolute right-6 top-6' onClick={closeMenu}>
-						<Image src={isDarkMode ? assets.close_white : assets.close_black} alt='close' className='w-5 cursor-pointer' />
+						<X className='w-9 h-9 p-2 border-[0.5px] border-darkBorder rounded-lg cursor-pointer hover:text-hoverText' />
 					</div>
 
-					<li><a onClick={closeMenu} href="#top">Home</a></li>
-					<li><a onClick={closeMenu} href="#about">About Me</a></li>
-					<li><a onClick={closeMenu} href="#services">Services</a></li>
-					<li><a onClick={closeMenu} href="#work">My Work</a></li>
-					<li><a onClick={closeMenu} href="#contact">Contact Me</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#top">Home</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#about">About Me</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#services">Services</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#work">My Work</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#contact">Contact Me</a></li>
 				</ul>
 			</nav>
 		</>
