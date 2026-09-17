@@ -80,7 +80,7 @@ const Header = () => {
 	}, [])
 
 	return (
-		<div className='w-full bg-none text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 border-b-[0.5px] border-darkBorder'>
+		<div className='w-full bg-none text-center mx-auto h-screen flex flex-col items-center justify-center gap-4'>
 			<div style={{ width: '100%', height: '100%', position: 'absolute', zIndex: -1 }}>
 				<DotField
 					dotRadius={1.5}
@@ -138,7 +138,7 @@ const Header = () => {
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.3 }}
 
-				className='max-w-2xl mb- mx-auto font-georama'>
+				className='max-w-2xl mb-2 mx-auto font-georama'>
 				I am a Full Stack Web Developer from Lahore, Pakistan with 2+ year of experience in full stack development.
 			</motion.p>
 

@@ -11,7 +11,7 @@ const About = ({ isDarkMode }) => {
 			transition={{ duration: 1 }}
 
 			id='about'
-			className='w-full px-[12%] py-10 scroll-mt-20 border-b-[0.5px] border-darkBorder'>
+			className='w-full px-[12%] py-10 scroll-mt-20'>
 			<motion.h4
 				initial={{ opacity: 0, y: -20 }}
 				whileInView={{ opacity: 1, y: 0 }}

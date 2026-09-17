@@ -26,7 +26,7 @@ const Navbar = () => {
 
 	return (
 		<>
-			<nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between  z-50 ${isScroll ? "bg-darkTheme/50 backdrop-blur-lg shadow-md dark:bg-darkTheme dark:shadow-primary/20" : ""}`}>
+			<nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between  z-50 ${isScroll ? "bg-darkTheme/50 backdrop-blur-lg shadow-md shadow-primary/20" : ""}`}>
 				<a href="#top">
 					<Image src={assets.logo_dark} alt='logo' loading='eager' className='w-32 cursor-pointer mr-14' />
 				</a>
