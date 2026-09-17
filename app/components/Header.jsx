@@ -159,7 +159,7 @@ const Header = () => {
 					transition={{ duration: 0.6, delay: 1.2 }}
 
 					href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
-					className='px-10 py-3 rounded-full flex items-center gap-2 text-black bg-primary hover:bg-darkHover hover:text-hoverText transition-all duration-300 ease-in-out'
+					className='px-10 py-3 rounded-full flex items-center gap-2 text-black bg-primary hover:bg-darkHover hover:text-white transition-all duration-300 ease-in-out'
 				>
 					My Resume <DownloadIcon className='w-5' /></motion.a>
 			</div>

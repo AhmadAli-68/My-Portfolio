@@ -2,6 +2,7 @@ import { assets, workData } from '@/assets/assets'
 import React from 'react'
 import Image from 'next/image'
 import { motion } from 'motion/react'
+import { ArrowRight, ArrowUpRight, ExternalLink } from 'lucide-react'
 
 const Work = ({ isDarkMode }) => {
 	return (
@@ -17,14 +18,14 @@ const Work = ({ isDarkMode }) => {
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.3 }}
 
-				className='text-center mb-2 text-lg font-Ovo'>My Portfolio</motion.h4>
+				className='text-center text-secondary mb-2 text-lg font-georama'>My Portfolio</motion.h4>
 
 			<motion.h2
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.5 }}
 
-				className='text-center text-5xl font-Ovo'>My Latest Work</motion.h2>
+				className='text-center text-secondary font-semibold text-5xl font-georama'>My Latest Work</motion.h2>
 
 			<motion.p
 				initial={{ opacity: 0 }}
@@ -48,14 +49,14 @@ const Work = ({ isDarkMode }) => {
 						className='aspect-4/3 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group shadow-xl dark:hover:shadow-lightHover/20'
 
 						style={{ backgroundImage: `url(${project.bgImage})` }}>
-						<a href={project.link} target='_blank' className='bg-lightHover w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between group-hover:bottom-7 duration-500'>
+						<a href={project.link} target='_blank' className='bg-secondary w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between group-hover:bottom-7 duration-500'>
 							<div>
 								<h2 className='font-semibold'>{project.title}</h2>
-								<p className='text-sm text-gray-700'>{project.description}</p>
+								<p className='text-sm text-black'>{project.description}</p>
 							</div>
 
-							<div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition'>
-								<Image src={assets.send_icon} alt="send icon" className='w-5' />
+							<div className='border rounded-full border-black w-9 aspect-square flex items-center justify-center group-hover:bg-darkHover group-hover:text-secondary transition-all duration-500 ease-in-out'>
+								<ExternalLink className='w-5' />
 							</div>
 						</a>
 					</motion.div>
@@ -68,10 +69,10 @@ const Work = ({ isDarkMode }) => {
 				transition={{ duration: 0.5, delay: 1.1 }}
 
 				href="https://github.com/AhmadAli-68"
-				className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-lightHover duration-500 dark:text-white dark:border-gray-300 dark:hover:bg-darkHover'
+				className='w-max flex items-center bg-darkTheme justify-center gap-2 border-[0.5px] rounded-full py-3 px-10 mx-auto my-20 transition-all duration-500 ease-in-out text-white border-darkBorder hover:bg-darkHover/30 hover:text-secondary'
 				target="_blank"
 				rel="noopener noreferrer">
-				Show more <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt="right arrow" className='w-4' />
+				Show more <ArrowRight className='w-5' />
 			</motion.a>
 		</motion.div>
 	)

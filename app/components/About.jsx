@@ -82,7 +82,6 @@ const About = () => {
 					>
 						<LogoLoop
 							logos={techLogos}
-							
 							speed={80}
 							direction="left"
 							logoHeight={40}

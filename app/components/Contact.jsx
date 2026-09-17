@@ -2,6 +2,7 @@ import { assets } from '@/assets/assets'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'motion/react'
+import { ArrowRight } from 'lucide-react'
 
 const Contact = () => {
     const [result, setResult] = useState("");
@@ -11,7 +12,7 @@ const Contact = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", process.env.NEXT_PUBLIC_ACCESS_KEY);
+        formData.append("access_key", '7ecf83da-a98e-423b-9353-7cb5cb97f542');
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -42,14 +43,14 @@ const Contact = () => {
                 whileInView={{ y: 1, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
 
-                className='text-center mb-2 text-lg font-Ovo'>Connect With Me</motion.h4>
+                className='text-center text-secondary mb-2 text-lg font-georama'>Connect With Me</motion.h4>
 
             <motion.h2
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
 
-                className='text-center text-5xl font-Ovo'>Get In Touch</motion.h2>
+                className='text-center text-secondary font-semibold text-5xl font-georama'>Get In Touch</motion.h2>
 
             <motion.p
                 initial={{ opacity: 0 }}
@@ -72,7 +73,7 @@ const Contact = () => {
                         transition={{ duration: 0.6, delay: 1.1 }}
 
                         type="text"
-                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-gray-300'
+                        className='flex-1 p-3 outline-none text-secondary border-[0.5px] border-darkBorder rounded-lg bg-darkHover/30'
                         placeholder='Enter your name' name='name' required />
 
                     <motion.input
@@ -81,7 +82,7 @@ const Contact = () => {
                         transition={{ duration: 0.6, delay: 1.2 }}
 
                         type="email"
-                        className='flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-gray-300'
+                        className='flex-1 p-3 outline-none text-secondary border-[0.5px] border-darkBorder rounded-lg bg-darkHover/30'
                         placeholder='Enter your email' name='email' required />
                 </div>
 
@@ -91,7 +92,7 @@ const Contact = () => {
                     transition={{ duration: 0.6, delay: 1.3 }}
 
                     rows='6'
-                    className='w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-gray-300'
+                    className='w-full p-4 outline-none resize-none text-secondary border-[0.5px] border-darkBorder rounded-lg mb-6 dark:bg-darkHover/30'
                     placeholder='Enter your message'
                     name='message'
                     required></motion.textarea>
@@ -100,8 +101,8 @@ const Contact = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
 
-                    className='py-3 px-8 flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 cursor-pointer dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover'
-                    type='submit'>Submit Now <Image src={assets.right_arrow_white} alt='right arrow' className='w-4' /></motion.button>
+                    className='py-3 px-8 flex items-center justify-between gap-2 bg-darkTheme hover:bg-darkHover/30 text-white rounded-full mx-auto duration-500 cursor-pointer border-[0.5px] border-darkBorder hover:text-secondary'
+                    type='submit'>Submit Now <ArrowRight className='w-5' /></motion.button>
 
                 <p className='mt-4 mx-auto flex items-center justify-center'>{result}</p>
             </motion.form>
