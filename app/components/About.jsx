@@ -75,7 +75,7 @@ const About = () => {
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 1.3 }}
 
-						className='my-6 font-georama text-secondary'>Languages and Tools</motion.h4>
+						className='my-6 font-georama'>Languages and Tools</motion.h4>
 
 					<div
 						className='flex justify-center items-center absolute mx-auto h-auto overflow-hidden max-w-2xl max-md:max-w-3/4 max-sm:max-w-[375px]'

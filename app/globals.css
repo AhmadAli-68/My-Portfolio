@@ -28,3 +28,9 @@
 * {
   font-family: georama;
 }
+
+@layer components {
+  .logoLoop-icons {
+    @apply text-secondary hover:text-white transition-colors ease-in-out duration-300
+  }
+}

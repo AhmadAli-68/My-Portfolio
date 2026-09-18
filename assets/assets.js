@@ -34,6 +34,8 @@ import { TbBrandVite } from 'react-icons/tb';
 import { IoLogoFirebase } from 'react-icons/io5';
 import { GrMysql } from 'react-icons/gr';
 
+import '../app/globals.css'
+
 export const assets = {
 	user_image,
 	code_icon_dark,
@@ -111,26 +113,26 @@ export const toolsData = [
 ];
 
 export const techLogos = [
-	{ node: <SiJavascript />, title: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-	{ node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
-	{ node: <SiMongodb />, title: "MongoDB", href: "https://www.mongodb.com/" },
-	{ node: <GrMysql />, title: "MySQL", href: "https://www.mysql.com/" },
-	{ node: <SiExpress />, title: "Express", href: "https://expressjs.com/" },
-	{ node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org/en" },
-	{ node: <SiReact />, title: "React", href: "https://react.dev" },
-	{ node: <SiRedux />, title: "Redux", href: "https://redux.js.org/" },
-	{ node: <SiPython />, title: "Python", href: "https://www.python.org/" },
-	{ node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-	{ node: <SiHtml5 />, title: "HTML5", href: "https://www.w3schools.com/html/" },
-	{ node: <SiCss />, title: "CSS", href: "https://www.w3schools.com/css/css_intro.asp" },
-	{ node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-	{ node: <SiGit />, title: "Git", href: "https://git-scm.com/" },
-	{ node: <SiGithub />, title: "GitHub", href: "https://github.com/" },
-	{ node: <SiPostman />, title: "Postman", href: "https://www.postman.com/" },
-	{ node: <IoLogoFirebase />, title: "Firebase", href: "https://firebase.google.com/" },
-	{ node: <VscVscode />, title: "VScode", href: "https://code.visualstudio.com/" },
-	{ node: <TbBrandVite />, title: "Vite", href: "https://tailwindcss.com" },
-	{ node: <SiVercel />, title: "Vercel", href: "https://vite.dev/" },
-	{ node: <SiNetlify />, title: "Netlify", href: "https://www.netlify.com/" },
-	{ node: <SiBootstrap />, title: "Bootstrap", href: "https://getbootstrap.com/" },
+	{ node: <SiJavascript className='logoLoop-icons' />, title: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+	{ node: <SiNextdotjs className='logoLoop-icons' />, title: "Next.js", href: "https://nextjs.org" },
+	{ node: <SiMongodb className='logoLoop-icons' />, title: "MongoDB", href: "https://www.mongodb.com/" },
+	{ node: <GrMysql className='logoLoop-icons' />, title: "MySQL", href: "https://www.mysql.com/" },
+	{ node: <SiExpress className='logoLoop-icons' />, title: "Express", href: "https://expressjs.com/" },
+	{ node: <SiNodedotjs className='logoLoop-icons' />, title: "Node.js", href: "https://nodejs.org/en" },
+	{ node: <SiReact className='logoLoop-icons' />, title: "React", href: "https://react.dev" },
+	{ node: <SiRedux className='logoLoop-icons' />, title: "Redux", href: "https://redux.js.org/" },
+	{ node: <SiPython className='logoLoop-icons' />, title: "Python", href: "https://www.python.org/" },
+	{ node: <SiTypescript className='logoLoop-icons' />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+	{ node: <SiHtml5 className='logoLoop-icons' />, title: "HTML5", href: "https://www.w3schools.com/html/" },
+	{ node: <SiCss className='logoLoop-icons' />, title: "CSS", href: "https://www.w3schools.com/css/css_intro.asp" },
+	{ node: <SiTailwindcss className='logoLoop-icons' />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+	{ node: <SiGit className='logoLoop-icons' />, title: "Git", href: "https://git-scm.com/" },
+	{ node: <SiGithub className='logoLoop-icons' />, title: "GitHub", href: "https://github.com/" },
+	{ node: <SiPostman className='logoLoop-icons' />, title: "Postman", href: "https://www.postman.com/" },
+	{ node: <IoLogoFirebase className='logoLoop-icons' />, title: "Firebase", href: "https://firebase.google.com/" },
+	{ node: <VscVscode className='logoLoop-icons' />, title: "VScode", href: "https://code.visualstudio.com/" },
+	{ node: <TbBrandVite className='logoLoop-icons' />, title: "Vite", href: "https://tailwindcss.com" },
+	{ node: <SiVercel className='logoLoop-icons' />, title: "Vercel", href: "https://vite.dev/" },
+	{ node: <SiNetlify className='logoLoop-icons' />, title: "Netlify", href: "https://www.netlify.com/" },
+	{ node: <SiBootstrap className='logoLoop-icons' />, title: "Bootstrap", href: "https://getbootstrap.com/" },
 ];
