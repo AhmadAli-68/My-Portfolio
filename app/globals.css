@@ -5,7 +5,7 @@
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 
 @theme {
-  --color-lightHover: #fcf4ff;
+  --color-lightHover: #B0E4CC;
   --color-darkBorder: #183D3D;
   --color-darkTheme: #040D12;
 

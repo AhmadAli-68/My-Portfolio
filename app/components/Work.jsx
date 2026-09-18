@@ -39,14 +39,14 @@ const Work = ({ isDarkMode }) => {
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.9 }}
 
-				className='grid grid-cols-auto my-10 gap-5 dark:text-black'>
+				className='grid grid-cols-auto my-10 gap-5 text-black'>
 				{workData.map((project, index) => (
 					<motion.div
 						whileHover={{ scale: 1.05 }}
 						transition={{ duration: 0.3 }}
 
 						key={index}
-						className='aspect-4/3 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group shadow-xl dark:hover:shadow-lightHover/20'
+						className='aspect-4/3 bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group shadow-xl hover:shadow-lightHover/20'
 
 						style={{ backgroundImage: `url(${project.bgImage})` }}>
 						<a href={project.link} target='_blank' className='bg-secondary w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between group-hover:bottom-7 duration-500'>
