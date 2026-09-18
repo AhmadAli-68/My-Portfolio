@@ -92,7 +92,7 @@ const Header = () => {
 					cursorRadius={500}
 					cursorForce={0.1}
 					bulgeOnly={true}
-					gradientFrom="#183D3D"
+					gradientFrom="#2A835F"
 					gradientTo="#4E9F3D"
 				/>
 			</div>
