@@ -101,8 +101,9 @@ const Header = () => {
 				initial={{ scale: 0 }}
 				whileInView={{ scale: 1 }}
 				transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+				className='border-[0.5px] border-darkBorder rounded-full'
 			>
-				<Image src={assets.profile_img} alt='profile' className='rounded-full w-32' />
+				<Image src={assets.profile_img} alt='profile' className='rounded-full w-40' />
 			</motion.div>
 
 			<motion.h3
