@@ -1,8 +1,9 @@
 import { workData } from '@/assets/assets'
 import React from 'react'
 import { motion } from 'motion/react'
-import { ArrowRight, CheckCircle2, ExternalLinkIcon } from 'lucide-react'
+import { ArrowRight, CheckCircle2, ExternalLink } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
+import Link from 'next/link'
 
 const Work = () => {
 
@@ -40,8 +41,8 @@ const Work = () => {
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.9 }}
 
-				className='grid grid-cols-1 md:grid-cols-2 my-5 gap-5'>
-				{workData.map(({ id, title, description, techStack, link }) => (
+				className='grid grid-cols-1 md:grid-cols-2 my-5 gap-6'>
+				{workData.map(({ id, title, description, frontend_backend_Stack, techStack, repoLink, liveLink }) => (
 					<div
 						key={id}
 						className='w-full h-full py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-2 transition-all duration-300'
@@ -67,26 +68,30 @@ const Work = () => {
 
 						<div className='flex items-center justify-between'>
 							<div className='flex text-secondary items-center gap-4'>
-								<div className='flex items-center cursor-pointer   hover:underline gap-1'>
-									<CheckCircle2 className='text-secondary' />
-									<p className=''>Frontend</p>
-								</div>
-
-								<div className='flex cursor-pointer hover:underline transition-all duration-300 items-center gap-1'>
-									<CheckCircle2 className='text-secondary' />
-									<p className=''>Backend</p>
-								</div>
+								{Array.isArray(frontend_backend_Stack) && frontend_backend_Stack.map((stack) => (
+									<div
+										key={stack}
+										className='flex items-center cursor-pointer hover:underline underline-offset-4 decoration-1 gap-1'
+									>
+										<CheckCircle2 className='text-secondary' />
+										<p className=''>{stack}</p>
+									</div>
+								))}
 							</div>
 
 							<div className='flex items-center gap-2'>
-								<button className='flex items-center cursor-pointer gap-1 text-sm text-secondary p-2 rounded-lg bg-darkHover/80 border-[0.5px] border-secondary'>
-								<FaGithub className='w-6 h-6' />
-									GitHub Repo
+								<button className='flex items-center cursor-pointer gap-1 text-sm text-secondary p-2 rounded-lg bg-darkHover/80 border-[0.5px] border-secondary/50'>
+									<FaGithub className='w-6 h-6' />
+									<Link href={repoLink}>GitHub Repo</Link>
 								</button>
 
-								<button className='flex items-center cursor-pointer gap-1 text-sm text-secondary p-2 rounded-lg bg-darkHover/80 border-[0.5px] border-secondary'>
-									<ExternalLinkIcon className='w-5' />
-									Live Demo
+								<button className={!liveLink ? 'hidden' : 'flex items-center cursor-pointer gap-1 text-sm text-secondary p-2 rounded-lg bg-darkHover/80 border-[0.5px] border-secondary/50'}>
+									{liveLink && (
+										<>
+											<ExternalLink className='w-5 h-6' />
+											<Link href={liveLink}>Live Demo</Link>
+										</>
+									)}
 								</button>
 							</div>
 						</div>

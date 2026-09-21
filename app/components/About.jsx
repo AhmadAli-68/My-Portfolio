@@ -61,7 +61,7 @@ const About = () => {
 							<motion.li
 								whileHover={{ scale: 1.05 }}
 
-								className='border-[0.5px] border-darkBorder rounded-xl p-6 cursor-pointer hover:-translate-y-1 transition-all duration-500 ease-in-out hover:shadow-black hover:shadow-secondary hover:bg-darkHover'
+								className='bg-darkHover/30 border-[0.5px] border-darkBorder rounded-xl p-6 cursor-pointer hover:-translate-y-1 transition-all duration-500 ease-in-out hover:shadow-black hover:shadow-secondary hover:bg-darkHover'
 								key={index}>
 								<Image src={iconDark} alt={title} className='w-8 mt-3' />
 								<h3 className='my-4 font-semibold text-white'>{title}</h3>

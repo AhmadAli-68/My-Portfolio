@@ -44,7 +44,7 @@ const Navbar = () => {
 
 				<div className='flex items-center gap-4'>
 
-					<a className='hidden lg:flex items-center gap-3 px-10 py-2.5 bg-darkTheme/50 backdrop-blur-lg border border-darkBorder hover:text-hoverText rounded-full ml-4 transition-all duration-300 ease-in-out' href="#contact">Contact <ArrowUpRight alt='arrow' className='w-5' /></a>
+					<a className='hidden lg:flex items-center gap-3 px-10 py-2.5 bg-darkTheme/50 backdrop-blur-lg border border-darkBorder hover:text-hoverText hover:bg-darkHover/30 rounded-full ml-4 transition-all duration-300 ease-in-out' href="#contact">Contact <ArrowUpRight alt='arrow' className='w-5' /></a>
 
 					<button className='block md:hidden ml-3' onClick={openMenu}>
 						<Image src={assets.menu_white} alt='menu' className='w-11 cursor-pointer bg-darkTheme border-[0.5px] border-darkBorder p-2 rounded-lg' />
@@ -56,14 +56,14 @@ const Navbar = () => {
 				<ul ref={sideMenuRef} className='flex md:hidden flex-col gap-3 py-20 px-4 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-darkTheme transition duration-500 text-white'>
 
 					<div className='absolute right-6 top-6' onClick={closeMenu}>
-						<X className='w-9 h-9 p-2 border-[0.5px] border-darkBorder rounded-lg cursor-pointer hover:text-hoverText' />
+						<X className='w-9 h-9 p-2 border-[0.5px] border-darkBorder rounded-lg cursor-pointer hover:text-hoverText hover:bg-darkHover/30 transition-colors duration-300 ease-in-out' />
 					</div>
 
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#top">Home</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#about">About Me</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#services">Services</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#work">My Work</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-primary/20 w-full transition-all ease-in-out duration-300' href="#contact">Contact Me</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#top">Home</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#about">About Me</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#services">Services</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#work">My Work</a></li>
+					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#contact">Contact Me</a></li>
 				</ul>
 			</nav>
 		</>
