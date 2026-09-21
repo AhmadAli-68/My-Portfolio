@@ -43,9 +43,12 @@ const Work = () => {
 
 				className='grid grid-cols-1 md:grid-cols-2 my-5 gap-6'>
 				{workData.map(({ id, title, description, frontend_backend_Stack, techStack, repoLink, liveLink }) => (
-					<div
+					<motion.div
 						key={id}
-						className='w-full h-full py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-2 transition-all duration-300'
+
+						// whileHover={{ scale: 1.05 }}
+
+						className='w-full h-full py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-1 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out'
 					>
 						<h2 className='text-xl font-semibold text-secondary mb-3'>{title}</h2>
 
@@ -95,7 +98,7 @@ const Work = () => {
 								</button>
 							</div>
 						</div>
-					</div>
+					</motion.div>
 				))}
 			</motion.div>
 

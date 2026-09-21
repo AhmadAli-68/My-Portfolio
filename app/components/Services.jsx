@@ -44,7 +44,7 @@ const Services = () => {
 						whileHover={{ scale: 1.05 }}
 
 						key={index}
-						className='bg-darkHover/30 border-[0.5px] border-darkBorder rounded-lg px-8 py-12 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out cursor-pointer hover:-translate-y-1 hover:bg-darkHover'
+						className='bg-darkHover/30 border-[0.5px] border-darkBorder rounded-lg px-8 py-12 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out cursor-pointer hover:-translate-y-1'
 					>
 						<Image src={icon} alt='icon' className='w-10' />
 						<h3 className='text-lg my-4 text-white'>{title}</h3>
