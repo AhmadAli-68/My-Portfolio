@@ -116,7 +116,8 @@ const Header = () => {
 			>
 				{renderText(
 					`Hey! I'm Ahmad Ali`,
-					`text-3xl font-georama`
+					`text-3xl font-georama`,
+					100
 				)}
 			</motion.h3>
 
@@ -125,7 +126,7 @@ const Header = () => {
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.7 }}
 
-				className='text-4xl md:text-6xl text-primary lg:text-7xl font-georama select-none'
+				className='text-4xl md:text-6xl text-secondary lg:text-7xl font-georama select-none'
 				ref={titleRef}
 			>
 				{renderText(
@@ -160,7 +161,7 @@ const Header = () => {
 					transition={{ duration: 0.6, delay: 1.2 }}
 
 					href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
-					className='px-10 py-3 rounded-full flex items-center gap-2 text-black bg-primary hover:bg-darkHover hover:text-white transition-all duration-300 ease-in-out'
+					className='px-10 py-3 rounded-full flex items-center gap-2 text-black bg-primary hover:bg-[#285A48] hover:text-secondary transition-all duration-300 ease-in-out'
 				>
 					My Resume <DownloadIcon className='w-5' /></motion.a>
 			</div>

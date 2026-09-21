@@ -71,25 +71,33 @@ export const assets = {
 export const workData = [
 	{
 		title: 'Task Manager',
-		description: 'MERN Stack',
-		bgImage: '/work-1.png',
+		description: 'A powerful MERN Stack task management application featuring role-based Admin and Member dashboards, task assignment, progress tracking, and data visualization with interactive charts.',
+		techStack: [
+			'MongoDB',
+			'Express.js',
+			'React.js',
+			'Node.js',
+			'JavaScript',
+			'Tailwind CSS',
+			'JWT',
+		],
 		link: "https://github.com/AhmadAli-68/Full-Stack-Task-Manager"
 	},
 	{
 		title: 'Brainwave UI',
-		description: 'Frontend',
+		techStack: 'Frontend',
 		bgImage: '/work-2.png',
 		link: "https://brainwave-one-theta.vercel.app"
 	},
 	{
 		title: 'Netflix Clone',
-		description: 'HTML, CSS, Js',
+		techStack: 'HTML, CSS, Js',
 		bgImage: '/work-3.png',
 		link: "https://net-flix-clone-org.netlify.app/"
 	},
 	{
 		title: 'AI Chatbot',
-		description: 'AI Chatting',
+		techStack: 'AI Chatting',
 		bgImage: '/work-4.png',
 		link: "https://ahmad-chatbot.netlify.app/"
 	},

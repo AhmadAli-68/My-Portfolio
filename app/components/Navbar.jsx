@@ -1,7 +1,10 @@
+'use client';
+
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { assets } from '@/assets/assets'
 import { ArrowUpRight, X } from 'lucide-react'
+import Link from 'next/link';
 
 const Navbar = () => {
 
@@ -27,16 +30,16 @@ const Navbar = () => {
 	return (
 		<>
 			<nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between  z-50 ${isScroll ? "bg-darkTheme/50 backdrop-blur-lg shadow-md shadow-primary/20" : ""}`}>
-				<a href="#top">
+				<Link href="/">
 					<Image src={assets.logo_dark} alt='logo' loading='eager' className='w-32 cursor-pointer mr-14' />
-				</a>
+				</Link>
 
 				<ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-darkTheme/50  backdrop-blur-lg shadow-sm border-[0.5px] border-darkBorder"} `}>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#top">Home</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#about">About Me</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#services">Services</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#work">My Work</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="#contact">Contact Me</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#top">Home</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#about">About Me</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#services">Services</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#work">My Work</a></li>
+					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#contact">Contact Me</a></li>
 				</ul>
 
 				<div className='flex items-center gap-4'>
