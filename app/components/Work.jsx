@@ -2,7 +2,6 @@ import { workData } from '@/assets/assets'
 import React from 'react'
 import { motion } from 'motion/react'
 import { ArrowRight, CheckCircle2, ExternalLinkIcon } from 'lucide-react'
-import { SiGithub } from 'react-icons/si'
 import { FaGithub } from 'react-icons/fa'
 
 const Work = () => {
