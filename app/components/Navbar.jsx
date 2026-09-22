@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { assets } from '@/assets/assets'
+import { assets, navLinks } from '@/assets/assets'
 import { ArrowUpRight, X } from 'lucide-react'
 import Link from 'next/link';
 
@@ -35,11 +35,16 @@ const Navbar = () => {
 				</Link>
 
 				<ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-darkTheme/50  backdrop-blur-lg shadow-sm border-[0.5px] border-darkBorder"} `}>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#top">Home</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#about">About Me</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#services">Services</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#work">My Work</a></li>
-					<li><a className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out' href="/#contact">Contact Me</a></li>
+					{navLinks.map(({ id, link, title }) => (
+						<li key={id}>
+							<Link
+								href={link}
+								className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out'
+							>
+								{title}
+							</Link>
+						</li>
+					))}
 				</ul>
 
 				<div className='flex items-center gap-4'>
@@ -59,11 +64,17 @@ const Navbar = () => {
 						<X className='w-9 h-9 p-2 border-[0.5px] border-darkBorder rounded-lg cursor-pointer hover:text-hoverText hover:bg-darkHover/30 transition-colors duration-300 ease-in-out' />
 					</div>
 
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#top">Home</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#about">About Me</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#services">Services</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#work">My Work</a></li>
-					<li><a onClick={closeMenu} className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300' href="/#contact">Contact Me</a></li>
+					{navLinks.map(({ id, link, title }) => (
+						<li key={id}>
+							<Link
+								href={link}
+								className='py-1 px-2 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary w-full transition-all ease-in-out duration-300'
+								onClick={closeMenu}
+							>
+								{title}
+							</Link>
+						</li>
+					))}
 				</ul>
 			</nav>
 		</>

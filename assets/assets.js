@@ -68,6 +68,34 @@ export const assets = {
 	web_icon
 };
 
+export const navLinks = [
+	{
+		id: 1,
+		link: '/#top',
+		title: 'Home'
+	},
+	{
+		id: 2,
+		link: '/#about',
+		title: 'About Me'
+	},
+	{
+		id: 3,
+		link: '/#services',
+		title: 'Services'
+	},
+	{
+		id: 4,
+		link: '/#work',
+		title: 'My Work'
+	},
+	{
+		id: 5,
+		link: '/#contact',
+		title: 'Contact Me'
+	},
+]
+
 export const workData = [
 	{
 		id: 1,

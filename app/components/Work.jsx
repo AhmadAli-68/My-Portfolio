@@ -13,7 +13,7 @@ const Work = () => {
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1 }}
 
-			id='work' className='w-full px-[12%] py-10 scroll-mt-20'>
+			id='work' className='w-full px-[10%] py-10 scroll-mt-20'>
 
 			<motion.h4
 				initial={{ y: -20, opacity: 0 }}
@@ -48,7 +48,7 @@ const Work = () => {
 
 						// whileHover={{ scale: 1.05 }}
 
-						className='w-full h-full py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-1 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out'
+						className='w-full h-fit py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-1 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out'
 					>
 						<h2 className='text-xl font-semibold text-secondary mb-3'>{title}</h2>
 
@@ -62,37 +62,49 @@ const Work = () => {
 							{Array.isArray(techStack) && techStack.map((tech) => (
 								<li
 									key={tech}
-									className='text-sm text-secondary border-[0.5px] border-secondary/50 px-3 py-1 hover:-translate-y-1 duration-300 ease-in-out select-none cursor-pointer bg-darkHover/80 rounded-lg'
+									className='text-sm text-secondary border-[0.5px] border-secondary/50 px-3 py-1 hover:-translate-y-1 duration-300 ease-in-out select-none cursor-pointer bg-darkHover/80 rounded-md'
 								>{tech}</li>
 							))}
 						</ul>
 
 						<hr className='text-darkBorder mb-4' />
 
-						<div className='flex items-center justify-between'>
-							<div className='flex text-secondary items-center gap-4'>
+						<div className='flex items-center justify-between overflow-hidden'>
+							<div className='flex flex-col lg:flex-row justify-center text-secondary items-center gap-4 md:gap-2'>
 								{Array.isArray(frontend_backend_Stack) && frontend_backend_Stack.map((stack) => (
 									<div
 										key={stack}
-										className='flex items-center cursor-pointer hover:underline underline-offset-4 decoration-1 gap-1'
+										className='flex flex-row items-center cursor-pointer hover:underline underline-offset-4 decoration-1 gap-1'
 									>
-										<CheckCircle2 className='text-secondary' />
-										<p className=''>{stack}</p>
+										<CheckCircle2 className='text-secondary w-4' />
+										<p className='text-sm'>{stack}</p>
 									</div>
 								))}
 							</div>
 
-							<div className='flex items-center gap-2'>
-								<button className='flex items-center cursor-pointer gap-1 text-sm text-secondary p-2 rounded-lg bg-darkHover/80 border-[0.5px] border-secondary/50'>
-									<FaGithub className='w-6 h-6' />
-									<Link href={repoLink}>GitHub Repo</Link>
+							<div className='flex flex-col items-start lg:flex-row lg:items-center gap-2'>
+								<button className='flex items-center cursor-pointer gap-[5px] lg:text-sm text-xs  text-secondary p-1 rounded-md bg-darkHover/80 border-[0.5px] border-secondary/50'>
+									<FaGithub className='w-4 h-4' />
+									<Link
+										href={repoLink}
+										target='_blank'
+										rel='noopener noreferrer'
+									>
+										GitHub Repo
+									</Link>
 								</button>
 
-								<button className={!liveLink ? 'hidden' : 'flex items-center cursor-pointer gap-1 text-sm text-secondary p-2 rounded-lg bg-darkHover/80 border-[0.5px] border-secondary/50'}>
+								<button className={!liveLink ? 'hidden' : 'flex items-center cursor-pointer gap-[5px] lg:text-sm text-xs text-secondary p-1 rounded-md bg-darkHover/80 border-[0.5px] border-secondary/50'}>
 									{liveLink && (
 										<>
-											<ExternalLink className='w-5 h-6' />
-											<Link href={liveLink}>Live Demo</Link>
+											<ExternalLink className='w-4 h-4' />
+											<Link
+												href={liveLink}
+												target='_blank'
+												rel='noopener noreferrer'
+											>
+												Live Demo
+											</Link>
 										</>
 									)}
 								</button>

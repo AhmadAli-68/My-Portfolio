@@ -4,7 +4,7 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
-const Footer = ({ isDarkMode }) => {
+const Footer = () => {
 	return (
 		<div className='mt-20'>
 			<div className='text-center'>
@@ -16,7 +16,7 @@ const Footer = ({ isDarkMode }) => {
 				</a>
 			</div>
 
-			<div className='text-center sm:flex items-center justify-between border-t border-darkBorder mx-[10%] mt-12 py-6'>
+			<div className='text-center sm:flex items-center justify-between border-t border-darkBorder mx-[8%] mt-12 py-6'>
 				<p>&copy; 2026 Ahmad Ali. All rights reserved.</p>
 				<ul className='flex items-center justify-center gap-10 mt-4 sm:mt-0'>
 					<li>
