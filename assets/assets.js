@@ -99,6 +99,76 @@ export const navLinks = [
 export const workData = [
 	{
 		id: 1,
+		title: 'DevEvent Platform',
+		description: `DevEvent - The hub for every developer event you mustn't miss, built with Next.js and TypeScript. Discover, explore, and stay updated with upcoming conferences, hackathons, workshops, and community events in one place. Built to make finding and joining developer events simple and effortless. Designed with a clean, intuitive experience to keep developers connected to what's happening next.`,
+		frontend_backend_Stack: ['Frontend', 'Backend'],
+		techStack: [
+			'Full Stack',
+			'Next.js',
+			'Typescript',
+			'MongoDB',
+			'Tailwind CSS',
+			'Shadcn UI'
+		],
+		repoLink: "https://github.com/AhmadAli-68/DevEvent-Platform.git",
+		liveLink: 'https://dev-events-blue-zeta.vercel.app/'
+	},
+	{
+		id: 2,
+		title: 'Full Stack Quick Blog App',
+		description: `AI Quick Blog - An AI-powered blogging platform built with the MERN Stack, Gemini API, Tailwind CSS, and Motion. Generate and manage blog content effortlessly with AI assistance, smooth animations, and a clean, responsive interface.`,
+		frontend_backend_Stack: ['Frontend', 'Backend'],
+		techStack: [
+			'Full Stack',
+			'MongoDB',
+			'Express.js',
+			'React.js',
+			'Node.js',
+			'JavaScript',
+			'Tailwind CSS',
+			'Motion',
+			'Gemini AI'
+		],
+		repoLink: "https://github.com/AhmadAli-68/MERN-Quick-Blog.git",
+		liveLink: 'https://quick-blog-eight-zeta.vercel.app/'
+	},
+	{
+		id: 3,
+		title: 'Full Stack Task Manager',
+		description: 'A powerful MERN Stack task management application featuring role-based Admin and Member dashboards, task assignment, progress tracking, and data visualization with interactive charts.',
+		frontend_backend_Stack: ['Frontend', 'Backend'],
+		techStack: [
+			'Full Stack',
+			'MongoDB',
+			'Express.js',
+			'React.js',
+			'Node.js',
+			'JavaScript',
+			'Tailwind CSS',
+			'JWT',
+		],
+		repoLink: "https://github.com/AhmadAli-68/Full-Stack-Task-Manager",
+		liveLink: ''
+	},
+	{
+		id: 4,
+		title: 'Full Stack Promptopia',
+		description: 'Promptopia – A modern prompt-sharing platform built with Next.js, Tailwind CSS, MongoDB, and NextAuth. Discover, create, and share AI prompts with a clean interface and seamless user authentication.',
+		frontend_backend_Stack: ['Frontend', 'Backend'],
+		techStack: [
+			'Full Stack',
+			'Next.js 15',
+			'Next Auth',
+			'React.js',
+			'MongoDB',
+			'JavaScript',
+			'Tailwind CSS',
+		],
+		repoLink: "https://github.com/AhmadAli-68/Next.js-Promptopia.git",
+		liveLink: ''
+	},
+	{
+		id: 5,
 		title: 'Restro',
 		description: 'Restro – A premium restaurant website built with React and Tailwind CSS, featuring an elegant UI, smooth animations with Motion, and seamless scrolling powered by Lenis.',
 		frontend_backend_Stack: ['Frontend'],
@@ -113,75 +183,19 @@ export const workData = [
 		//todo: liveLink here
 	},
 	{
-		id: 2,
-		title: 'Estate',
-		description: 'Estate – A modern real estate website built with React.js and Tailwind CSS, featuring a clean UI, responsive design, and interactive property browsing. Designed with elegant visuals and intuitive navigation for a seamless property discovery experience.',
-		frontend_backend_Stack: ['Frontend'],
-		techStack: [
-			'React.js',
-			'JavaScript',
-			'Tailwind CSS',
-		],
-		repoLink: "https://github.com/AhmadAli-68/Full-Stack-Task-Manager",
-		liveLink: 'https://estate-website-rust.vercel.app/'
-	},
-	{
-		id: 3,
-		title: 'Mac-OS Style Portfolio',
-		description: 'Mac OS Portfolio – A macOS-inspired portfolio built with React.js and Tailwind CSS, featuring smooth GSAP animations, interactive desktop elements, and state management with Zustand.',
+		id: 6,
+		title: 'MacBook 3D Website',
+		description: `Apple-style website built with React, Three.js, GSAP, and TailwindCSS. Create immersive 3D product scenes with realistic lighting, scroll-triggered animations, masking effects and smooth animations.`,
 		frontend_backend_Stack: ['Frontend'],
 		techStack: [
 			'React.js',
 			'Tailwind CSS',
 			'JavaScript',
 			'GSAP',
-			'Zustand'
+			'Three.js'
 		],
-		repoLink: 'https://github.com/AhmadAli-68/MacOS-Style-Portfolio.git',
-		//todo: liveLink here
-	},
-	{
-		id: 4,
-		title: 'Full Stack Netflix Clone',
-		description: 'Netflix Clone – A full-stack streaming platform built with React, CSS, and Firebase Authentication, user authentication, and responsive layouts. Designed with a clean interface to provide a smooth and engaging streaming experience.',
-		frontend_backend_Stack: ['Frontend', 'Backend'],
-		techStack: [
-			'React.js',
-			'JavaScript',
-			'Firebase Auth',
-			'CSS3',
-			'TMDB API'
-		],
-		repoLink: 'https://github.com/AhmadAli-68/Full-Stack-Netflix-Clone.git',
-		liveLink: 'https://full-stack-netflix-clone-two.vercel.app/',
-	},
-	{
-		id: 5,
-		title: 'Photo-Video Sharing App',
-		description: 'Photo & Video Sharing App – A modern media-sharing platform built with Python, Streamlit, and FastAPI, enabling users to upload, share, and manage photos and videos.Designed with a clean interface, fast API integration, and a seamless experience for managing shared media.',
-		frontend_backend_Stack: ['Frontend', 'Backend'],
-		techStack: [
-			'Python',
-			'FastAPI',
-			'Streamlit',
-		],
-		repoLink: "https://github.com/AhmadAli-68/FastAPI-PhotoVideoSharingApp.git",
-		liveLink: ''
-	},
-	{
-		id: 6,
-		title: 'DevEvent Platform',
-		description: 'DevEvent – The hub for every developer event you mustn’t miss, built with Next.js and TypeScript. Discover, explore, and stay updated with upcoming conferences, hackathons, workshops, and community events in one place.',
-		frontend_backend_Stack: ['Frontend', 'Backend'],
-		techStack: [
-			'Next.js',
-			'Typescript',
-			'MongoDB',
-			'Tailwind CSS',
-			'Shadcn UI'
-		],
-		repoLink: "https://github.com/AhmadAli-68/DevEvent-Platform.git",
-		liveLink: 'https://dev-events-blue-zeta.vercel.app/'
+		repoLink: "https://github.com/AhmadAli-68/Macbook-GSAP-App.git",
+		liveLink: 'https://macbook-gsap-app-indol.vercel.app/'
 	},
 	{
 		id: 7,
@@ -200,37 +214,47 @@ export const workData = [
 	},
 	{
 		id: 8,
-		title: 'MacBook 3D Website',
-		description: `Apple-style website built with React, Three.js, GSAP, and TailwindCSS. Create immersive 3D product scenes with realistic lighting, scroll-triggered animations, masking effects and smooth animations.`,
+		title: 'Estate',
+		description: 'Estate – A modern real estate website built with React.js and Tailwind CSS, featuring a clean UI, responsive design, and interactive property browsing. Designed with elegant visuals and intuitive navigation for a seamless property discovery experience.',
+		frontend_backend_Stack: ['Frontend'],
+		techStack: [
+			'React.js',
+			'JavaScript',
+			'Tailwind CSS',
+		],
+		repoLink: "https://github.com/AhmadAli-68/Full-Stack-Task-Manager",
+		liveLink: 'https://estate-website-rust.vercel.app/'
+	},
+	{
+		id: 9,
+		title: 'Mac-OS Style Portfolio',
+		description: 'Mac OS Portfolio – A macOS-inspired portfolio built with React.js and Tailwind CSS, featuring smooth GSAP animations, interactive desktop elements, and state management with Zustand.',
 		frontend_backend_Stack: ['Frontend'],
 		techStack: [
 			'React.js',
 			'Tailwind CSS',
 			'JavaScript',
 			'GSAP',
-			'Three.js'
+			'Zustand'
 		],
-		repoLink: "https://github.com/AhmadAli-68/Macbook-GSAP-App.git",
-		liveLink: 'https://macbook-gsap-app-indol.vercel.app/'
-	},
-	{
-		id: 9,
-		title: 'Full Stack Promptopia',
-		description: 'Promptopia – A modern prompt-sharing platform built with Next.js, Tailwind CSS, MongoDB, and NextAuth. Discover, create, and share AI prompts with a clean interface and seamless user authentication.',
-		frontend_backend_Stack: ['Frontend', 'Backend'],
-		techStack: [
-			'Next.js 15',
-			'Next Auth',
-			'React.js',
-			'MongoDB',
-			'JavaScript',
-			'Tailwind CSS',
-		],
-		repoLink: "https://github.com/AhmadAli-68/Next.js-Promptopia.git",
-		liveLink: ''
+		repoLink: 'https://github.com/AhmadAli-68/MacOS-Style-Portfolio.git',
+		liveLink: 'https://mac-os-style-portfolio-snowy.vercel.app/'
 	},
 	{
 		id: 10,
+		title: 'Photo-Video Sharing App',
+		description: 'Photo & Video Sharing App – A modern media-sharing platform built with Python, Streamlit, and FastAPI, enabling users to upload, share, and manage photos and videos.Designed with a clean interface, fast API integration, and a seamless experience for managing shared media.',
+		frontend_backend_Stack: ['Frontend', 'Backend'],
+		techStack: [
+			'Python',
+			'FastAPI',
+			'Streamlit',
+		],
+		repoLink: "https://github.com/AhmadAli-68/FastAPI-PhotoVideoSharingApp.git",
+		liveLink: ''
+	},
+	{
+		id: 11,
 		title: 'Cocktail Website',
 		description: 'A modern cocktail website built with React and TailwindCSS, featuring smooth GSAP animations such as SplitText reveals, scroll-triggered effects, parallax scrolling, and a custom carousel.',
 		frontend_backend_Stack: ['Frontend'],
@@ -245,42 +269,7 @@ export const workData = [
 		liveLink: 'https://cocktails-website-nine.vercel.app/'
 	},
 	{
-		id: 11,
-		title: 'Full Stack Task Manager',
-		description: 'A powerful MERN Stack task management application featuring role-based Admin and Member dashboards, task assignment, progress tracking, and data visualization with interactive charts.',
-		frontend_backend_Stack: ['Frontend', 'Backend'],
-		techStack: [
-			'MongoDB',
-			'Express.js',
-			'React.js',
-			'Node.js',
-			'JavaScript',
-			'Tailwind CSS',
-			'JWT',
-		],
-		repoLink: "https://github.com/AhmadAli-68/Full-Stack-Task-Manager",
-		liveLink: ''
-	},
-	{
 		id: 12,
-		title: 'Full Stack Quick Blog App',
-		description: 'AI Quick Blog – An AI-powered blogging platform built with the MERN Stack, Gemini API, Tailwind CSS, and Motion. Generate and manage blog content effortlessly with AI assistance, smooth animations, and a clean, responsive interface.',
-		frontend_backend_Stack: ['Frontend', 'Backend'],
-		techStack: [
-			'MongoDB',
-			'Express.js',
-			'React.js',
-			'Node.js',
-			'JavaScript',
-			'Tailwind CSS',
-			'Motion',
-			'Gemini AI'
-		],
-		repoLink: "https://github.com/AhmadAli-68/MERN-Quick-Blog.git",
-		liveLink: 'https://quick-blog-eight-zeta.vercel.app/'
-	},
-	{
-		id: 13,
 		title: 'Brainwave UI',
 		description: 'Brainwave UI – A modern AI-inspired website built with React.js and Tailwind CSS, featuring a sleek interface, responsive layouts, and engaging interactive sections. Designed with a clean, futuristic aesthetic to deliver a smooth and immersive browsing experience.',
 		frontend_backend_Stack: ['Frontend'],
@@ -293,13 +282,48 @@ export const workData = [
 		repoLink: 'https://github.com/AhmadAli-68/React-Brainwave.git',
 		liveLink: "https://brainwave-one-theta.vercel.app"
 	},
+	{
+		id: 13,
+		title: 'Full Stack Netflix Clone',
+		description: 'Netflix Clone – A full-stack streaming platform built with React, CSS, and Firebase Authentication, user authentication, and responsive layouts. Designed with a clean interface to provide a smooth and engaging streaming experience.',
+		frontend_backend_Stack: ['Frontend', 'Backend'],
+		techStack: [
+			'React.js',
+			'JavaScript',
+			'Firebase Auth',
+			'CSS3',
+			'TMDB API'
+		],
+		repoLink: 'https://github.com/AhmadAli-68/Full-Stack-Netflix-Clone.git',
+		liveLink: 'https://full-stack-netflix-clone-two.vercel.app/',
+	},
 ]
 
 export const serviceData = [
-	{ icon: assets.web_icon, title: 'Web design', description: 'Web design is the process of planning, conceptualizing, and arranging content online. It combines aesthetics with functionality and better UI.', link: '' },
-	{ icon: assets.database_icon, title: 'Backend Development', description: 'Backend development focuses on server-side logic, databases, and APIs to ensure seamless communication between the frontend and the server.', link: '' },
-	{ icon: assets.version_control_icon, title: 'Version Control', description: 'Version control is the practice of tracking and managing changes to code. It enables multiple developers to collaborate, maintain history.', link: '' },
-	{ icon: assets.api_icon, title: 'API Integration', description: 'API integration enables applications to connect with external systems, exchange data, and extend functionality efficiently.', link: '' },
+	{
+		icon: assets.web_icon,
+		title: 'Web design',
+		description: 'Web design is the process of planning, conceptualizing, and arranging content online. It combines aesthetics with functionality and better UI.',
+		link: ''
+	},
+	{
+		icon: assets.database_icon,
+		title: 'Backend Development',
+		description: 'Backend development focuses on server-side logic, databases, and APIs to ensure seamless communication between the frontend and the server.',
+		link: ''
+	},
+	{
+		icon: assets.version_control_icon,
+		title: 'Version Control',
+		description: 'Version control is the practice of tracking and managing changes to code. It enables multiple developers to collaborate, maintain history.',
+		link: ''
+	},
+	{
+		icon: assets.api_icon,
+		title: 'API Integration',
+		description: 'API integration enables applications to connect with external systems, exchange data, and extend functionality efficiently.',
+		link: ''
+	},
 ]
 
 export const infoList = [

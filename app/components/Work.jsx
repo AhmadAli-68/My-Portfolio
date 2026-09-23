@@ -27,7 +27,7 @@ const Work = () => {
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.5 }}
 
-				className='text-center text-secondary font-semibold text-5xl font-georama'>My Latest Work</motion.h2>
+				className='text-center text-secondary font-semibold text-5xl font-georama'>Featured Projects</motion.h2>
 
 			<motion.p
 				initial={{ opacity: 0 }}
@@ -42,11 +42,9 @@ const Work = () => {
 				transition={{ duration: 0.6, delay: 0.9 }}
 
 				className='grid grid-cols-1 md:grid-cols-2 my-5 gap-6'>
-				{workData.map(({ id, title, description, frontend_backend_Stack, techStack, repoLink, liveLink }) => (
+				{workData.slice(0, 4).map(({ id, title, description, frontend_backend_Stack, techStack, repoLink, liveLink }) => (
 					<motion.div
 						key={id}
-
-						// whileHover={{ scale: 1.05 }}
 
 						className='w-full h-fit py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-1 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out'
 					>

@@ -20,15 +20,15 @@ const roboto = Roboto({
 
 
 export const metadata = {
-  title: "My Portfolio - Ahmad",
+  title: "Ahmad Ali Dev - Portfolio",
   description: "",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
-    lang="en"
-    className={cn("scroll-smooth", "font-sans", geist.variable)}
+      lang="en"
+      className={cn("scroll-smooth", "font-sans", geist.variable)}
     >
       <body
         className={`${georama.className} ${roboto.className} min-h-full flex flex-col antialiased leading-8 overflow-x-hidden bg-darkTheme text-white`}
