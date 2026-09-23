@@ -29,6 +29,7 @@ const Certifications = () => {
                 <Image
                   src={image}
                   alt={title}
+                  loading='eager'
                   className='size-80 bg-center rounded-md border border-darkBorder object-cover bg-no-repeat overflow-hidden'
                 />
               </a>
