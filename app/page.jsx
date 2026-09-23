@@ -1,12 +1,12 @@
 'use client';
-import Navbar from "./components/Navbar";
+
 import Header from "./components/Header";
 import About from "./components/About";
 import Services from "./components/Services";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
 import { Toaster } from 'react-hot-toast';
+import Certifications from './components/Certifications';
 
 export default function Home() {
   // const [isDarkMode, setIsDarkMode] = useState(false)
@@ -35,8 +35,8 @@ export default function Home() {
         position='top-center'
         toastOptions={{
           style: {
-            backgroundColor: '#040D12',
-            color: '#ffffff',
+            backgroundColor: '#12544fB3',
+            color: '#B0E4CC',
             border: '0.5px solid #183D3D',
             borderRadius: '12px',
             padding: '16px'
@@ -58,6 +58,7 @@ export default function Home() {
       <About />
       <Services />
       <Work />
+      <Certifications />
       <Contact />
     </>
   );

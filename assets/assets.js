@@ -27,6 +27,9 @@ import api_icon from './api-icon.png'
 import web_icon from './web-icon.png'
 import version_control_icon from './version-control-icon.png'
 import database_icon from './database-icon.png'
+import certificate_1 from './certificate-1.jpg'
+import certificate_2 from './certificate-2.jpg'
+import certificate_3 from './certificate-3.jpg'
 
 import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiMongodb, SiExpress, SiNodedotjs, SiRedux, SiHtml5, SiCss, SiGit, SiGithub, SiPostman, SiVercel, SiNetlify, SiBootstrap, SiPython } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
@@ -65,7 +68,10 @@ export const assets = {
 	api_icon,
 	database_icon,
 	version_control_icon,
-	web_icon
+	web_icon,
+	certificate_1,
+	certificate_2,
+	certificate_3,
 };
 
 export const navLinks = [
@@ -91,6 +97,11 @@ export const navLinks = [
 	},
 	{
 		id: 5,
+		link: '/#certifications',
+		title: 'Certifications'
+	},
+	{
+		id: 6,
 		link: '/#contact',
 		title: 'Contact Me'
 	},
@@ -337,26 +348,138 @@ export const toolsData = [
 ];
 
 export const techLogos = [
-	{ node: <SiJavascript className='logoLoop-icons' />, title: "Javascript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
-	{ node: <SiNextdotjs className='logoLoop-icons' />, title: "Next.js", href: "https://nextjs.org" },
-	{ node: <SiMongodb className='logoLoop-icons' />, title: "MongoDB", href: "https://www.mongodb.com/" },
-	{ node: <GrMysql className='logoLoop-icons' />, title: "MySQL", href: "https://www.mysql.com/" },
-	{ node: <SiExpress className='logoLoop-icons' />, title: "Express", href: "https://expressjs.com/" },
-	{ node: <SiNodedotjs className='logoLoop-icons' />, title: "Node.js", href: "https://nodejs.org/en" },
-	{ node: <SiReact className='logoLoop-icons' />, title: "React", href: "https://react.dev" },
-	{ node: <SiRedux className='logoLoop-icons' />, title: "Redux", href: "https://redux.js.org/" },
-	{ node: <SiPython className='logoLoop-icons' />, title: "Python", href: "https://www.python.org/" },
-	{ node: <SiTypescript className='logoLoop-icons' />, title: "TypeScript", href: "https://www.typescriptlang.org" },
-	{ node: <SiHtml5 className='logoLoop-icons' />, title: "HTML5", href: "https://www.w3schools.com/html/" },
-	{ node: <SiCss className='logoLoop-icons' />, title: "CSS", href: "https://www.w3schools.com/css/css_intro.asp" },
-	{ node: <SiTailwindcss className='logoLoop-icons' />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
-	{ node: <SiGit className='logoLoop-icons' />, title: "Git", href: "https://git-scm.com/" },
-	{ node: <SiGithub className='logoLoop-icons' />, title: "GitHub", href: "https://github.com/" },
-	{ node: <SiPostman className='logoLoop-icons' />, title: "Postman", href: "https://www.postman.com/" },
-	{ node: <IoLogoFirebase className='logoLoop-icons' />, title: "Firebase", href: "https://firebase.google.com/" },
-	{ node: <VscVscode className='logoLoop-icons' />, title: "VScode", href: "https://code.visualstudio.com/" },
-	{ node: <TbBrandVite className='logoLoop-icons' />, title: "Vite", href: "https://tailwindcss.com" },
-	{ node: <SiVercel className='logoLoop-icons' />, title: "Vercel", href: "https://vite.dev/" },
-	{ node: <SiNetlify className='logoLoop-icons' />, title: "Netlify", href: "https://www.netlify.com/" },
-	{ node: <SiBootstrap className='logoLoop-icons' />, title: "Bootstrap", href: "https://getbootstrap.com/" },
+	{
+		node: <SiJavascript className='logoLoop-icons' />,
+		title: "Javascript",
+		href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+	},
+	{
+		node: <SiNextdotjs className='logoLoop-icons' />,
+		title: "Next.js",
+		href: "https://nextjs.org"
+	},
+	{
+		node: <SiMongodb className='logoLoop-icons' />,
+		title: "MongoDB",
+		href: "https://www.mongodb.com/"
+	},
+	{
+		node: <GrMysql className='logoLoop-icons' />,
+		title: "MySQL",
+		href: "https://www.mysql.com/"
+	},
+	{
+		node: <SiExpress className='logoLoop-icons' />,
+		title: "Express",
+		href: "https://expressjs.com/"
+	},
+	{
+		node: <SiNodedotjs className='logoLoop-icons' />,
+		title: "Node.js",
+		href: "https://nodejs.org/en"
+	},
+	{
+		node: <SiReact className='logoLoop-icons' />,
+		title: "React",
+		href: "https://react.dev"
+	},
+	{
+		node: <SiRedux className='logoLoop-icons' />,
+		title: "Redux",
+		href: "https://redux.js.org/"
+	},
+	{
+		node: <SiPython className='logoLoop-icons' />,
+		title: "Python",
+		href: "https://www.python.org/"
+	},
+	{
+		node: <SiTypescript className='logoLoop-icons' />,
+		title: "TypeScript",
+		href: "https://www.typescriptlang.org"
+	},
+	{
+		node: <SiHtml5 className='logoLoop-icons' />,
+		title: "HTML5",
+		href: "https://www.w3schools.com/html/"
+	},
+	{
+		node: <SiCss className='logoLoop-icons' />,
+		title: "CSS",
+		href: "https://www.w3schools.com/css/css_intro.asp"
+	},
+	{
+		node: <SiTailwindcss className='logoLoop-icons' />,
+		title: "Tailwind CSS",
+		href: "https://tailwindcss.com"
+	},
+	{
+		node: <SiGit className='logoLoop-icons' />,
+		title: "Git",
+		href: "https://git-scm.com/"
+	},
+	{
+		node: <SiGithub className='logoLoop-icons' />,
+		title: "GitHub",
+		href: "https://github.com/"
+	},
+	{
+		node: <SiPostman className='logoLoop-icons' />,
+		title: "Postman",
+		href: "https://www.postman.com/"
+	},
+	{
+		node: <IoLogoFirebase className='logoLoop-icons' />,
+		title: "Firebase",
+		href: "https://firebase.google.com/"
+	},
+	{
+		node: <VscVscode className='logoLoop-icons' />,
+		title: "VScode",
+		href: "https://code.visualstudio.com/"
+	},
+	{
+		node: <TbBrandVite className='logoLoop-icons' />,
+		title: "Vite",
+		href: "https://vite.dev/"
+	},
+	{
+		node: <SiVercel className='logoLoop-icons' />,
+		title: "Vercel",
+		href: "https://vercel.com/"
+	},
+	{
+		node: <SiNetlify className='logoLoop-icons' />,
+		title: "Netlify",
+		href: "https://www.netlify.com/"
+	},
+	{
+		node: <SiBootstrap className='logoLoop-icons' />,
+		title: "Bootstrap",
+		href: "https://getbootstrap.com/"
+	},
 ];
+
+export const certificateData = [
+	{
+		id: 1,
+		image: assets.certificate_1,
+		link: './certificate-1.jpg',
+		title: 'MERN Stack Development Certificate',
+		description: 'Awarded by NexSkill upon successfully completing a comprehensive 6-month hands-on training program. Demonstrates proficiency in full-stack web development using MongoDB, Express.js, React, and Node.js. Includes rigorous technical assessment, project submission, and verified course completion.',
+	},
+	{
+		id: 2,
+		image: assets.certificate_2,
+		link: './certificate-2.jpg',
+		title: 'Next.js Internship Certificate',
+		description: 'Awarded for successfully completing a 4-month internship focused on Next.js development from April 2025 to July 2025. Demonstrates practical experience in building modern web applications, client-side and server-side rendering, and production-ready React architecture. Issued on July 19, 2025, by Mian Ahmad Basit (CEO) and Zeeshan Ali (Training Coordinator).',
+	},
+	{
+		id: 3,
+		image: assets.certificate_3,
+		link: './certificate-3.jpg',
+		title: 'Introduction to Artificial Intelligence',
+		description: `Awarded by Simplilearn SkillUp for successfully completing the Introduction to Artificial Intelligence online course. Validates a foundational understanding of core AI concepts, key terminology, and practical applications in modern tech. Demonstrates a strong commitment to continuous learning and expanding technical expertise in emerging technologies.`,
+	},
+]

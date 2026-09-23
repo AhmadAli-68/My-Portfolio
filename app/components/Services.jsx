@@ -1,7 +1,6 @@
 import { assets, serviceData } from '@/assets/assets'
 import { motion } from 'motion/react'
 import Image from 'next/image'
-import React from 'react'
 
 const Services = () => {
 	return (
