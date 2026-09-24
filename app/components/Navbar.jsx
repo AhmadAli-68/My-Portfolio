@@ -31,15 +31,16 @@ const Navbar = () => {
 		<>
 			<nav className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between  z-50 ${isScroll ? "bg-darkTheme/50 backdrop-blur-lg shadow-md shadow-primary/20" : ""}`}>
 				<Link href="/">
-					<Image src={assets.logo_dark} alt='logo' loading='eager' className='w-32 cursor-pointer mr-14' />
+					<Image src={assets.logo_dark} alt='logo' loading='eager' className='w-32 cursor-pointer' />
 				</Link>
 
-				<ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-darkTheme/50  backdrop-blur-lg shadow-sm border-[0.5px] border-darkBorder"} `}>
+				<ul className={`hidden md:flex items-center gap-6 lg:gap-2 rounded-full px-2 py-3 ${isScroll ? "" : "bg-darkTheme/50  backdrop-blur-lg shadow-sm border-[0.5px] border-darkBorder"} `}>
+
 					{navLinks.map(({ id, link, title }) => (
 						<li key={id}>
 							<Link
 								href={link}
-								className='font-georama text-primary hover:text-hoverText transition-all duration-300 ease-in-out'
+								className='font-georama text-white px-4 py-3 hover:text-secondary hover:bg-darkHover/30 hover:rounded-full transition-all duration-300 ease-in-out'
 							>
 								{title}
 							</Link>

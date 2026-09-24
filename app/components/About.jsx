@@ -77,7 +77,11 @@ const About = () => {
 
 						className='my-6 font-georama'>Languages and Tools</motion.h4>
 
-					<div
+					<motion.div
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{ duration: 0.5, delay: 1.1 }}
+
 						className='flex justify-center items-center absolute mx-auto h-auto overflow-hidden max-w-2xl max-md:max-w-3/4 max-sm:max-w-[375px]'
 					>
 						<LogoLoop
@@ -92,7 +96,7 @@ const About = () => {
 							fadeOutColor="#040d12"
 							ariaLabel="Languages and Tools"
 						/>
-					</div>
+					</motion.div>
 				</motion.div>
 			</motion.div>
 		</motion.div>

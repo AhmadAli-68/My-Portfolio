@@ -1,20 +1,55 @@
 import { certificateData } from '@/assets/assets'
+import { motion } from 'motion/react'
 import Image from 'next/image'
 import React from 'react'
 
 const Certifications = () => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+
       id='certifications'
       className='w-full px-[8%] py-10 scroll-mt-20'
     >
-      <h4 className='text-lg text-center text-secondary font-georama mb-2'>My Achievements</h4>
+      <motion.h4
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
 
-      <h2 className='font-georama text-center text-5xl text-secondary font-semibold'>Certifications</h2>
+        className='text-lg text-center text-secondary font-georama mb-2'
+      >
+        My Achievements
+      </motion.h4>
 
-      <p className='text-center max-w-2xl mx-auto mt-5 mb-12'>Explore my certifications and achievements that reflect my continuous learning, technical skills, and commitment to growing as a full-stack developer.</p>
+      <motion.h2
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-6 my-5'>
+        className='font-georama text-center text-5xl text-secondary font-semibold'
+      >
+        Certifications
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+
+        className='text-center max-w-2xl mx-auto mt-5 mb-12'
+      >
+        Explore my certifications and achievements that reflect my continuous learning, technical skills, and commitment to growing as a full-stack developer.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+
+        className='grid grid-cols-1 md:grid-cols-2 gap-6 my-5'
+      >
         {certificateData.map(({ id, image, link, title, description }) => (
           <div
             key={id}
@@ -48,8 +83,8 @@ const Certifications = () => {
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 
