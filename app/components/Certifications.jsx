@@ -20,7 +20,7 @@ const Certifications = () => {
             key={id}
             className='w-full h-full max-md:w-fit mx-auto p-4 bg-darkHover/30 border border-darkBorder rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-black hover:shadow-secondary transition-all duration-300'
           >
-            <div className='flex flex-col xl:flex-row overflow-hidden justify-center items-center gap-3'>
+            <div className='flex flex-col xl:flex-row overflow-hidden items-center gap-3'>
               <a
                 href={link}
                 target='_blank'
@@ -35,13 +35,13 @@ const Certifications = () => {
               </a>
 
               <div>
-                <h2 className='text-lg max-sm:text-center max-md:text-center max-lg:text-center text-secondary font-semibold mb-2'>
+                <h2 className='text-lg max-lg:text-center text-secondary font-semibold mb-2'>
                   {title}
                 </h2>
 
                 <hr className='text-darkBorder mb-2' />
 
-                <p className='max-sm:text-center max-md:text-center max-lg:text-center max-w-96'>
+                <p className='max-lg:text-center max-w-96'>
                   {description}
                 </p>
               </div>
