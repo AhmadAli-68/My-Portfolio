@@ -83,7 +83,7 @@ export const navLinks = [
 	{
 		id: 2,
 		link: '/#about',
-		title: 'About Me'
+		title: 'About'
 	},
 	{
 		id: 3,
@@ -93,7 +93,7 @@ export const navLinks = [
 	{
 		id: 4,
 		link: '/#work',
-		title: 'My Work'
+		title: 'Work'
 	},
 	{
 		id: 5,
@@ -103,7 +103,7 @@ export const navLinks = [
 	{
 		id: 6,
 		link: '/#contact',
-		title: 'Contact Me'
+		title: 'Contact'
 	},
 ]
 
