@@ -30,6 +30,10 @@ import database_icon from './database-icon.png'
 import certificate_1 from './certificate-1.jpg'
 import certificate_2 from './certificate-2.jpg'
 import certificate_3 from './certificate-3.jpg'
+import linkedin from './linkedin.png'
+import instagram from './instagram.png'
+import github from './github.png'
+import X from './x.png'
 
 import { SiNextdotjs, SiReact, SiTypescript, SiTailwindcss, SiJavascript, SiMongodb, SiExpress, SiNodedotjs, SiRedux, SiHtml5, SiCss, SiGit, SiGithub, SiPostman, SiVercel, SiNetlify, SiBootstrap, SiPython } from 'react-icons/si';
 import { VscVscode } from 'react-icons/vsc';
@@ -72,6 +76,10 @@ export const assets = {
 	certificate_1,
 	certificate_2,
 	certificate_3,
+	instagram,
+	linkedin,
+	github,
+	X
 };
 
 export const navLinks = [
@@ -481,5 +489,32 @@ export const certificateData = [
 		link: './certificate-3.jpg',
 		title: 'Introduction to Artificial Intelligence',
 		description: `Awarded by Simplilearn SkillUp for successfully completing the Introduction to Artificial Intelligence online course. Validates a foundational understanding of core AI concepts, key terminology, and practical applications in modern tech. Demonstrates a strong commitment to continuous learning and expanding technical expertise in emerging technologies.`,
+	},
+]
+
+export const FooterLinks = [
+	{
+		id: 1,
+		title: 'GitHub',
+		logo: assets.github,
+		url: 'https://github.com/AhmadAli-68',
+	},
+	{
+		id: 2,
+		title: 'LinkedIn',
+		logo: assets.linkedin,
+		url: 'https://www.linkedin.com/in/ahmad-ali-dev/',
+	},
+	{
+		id: 3,
+		title: 'Instagram',
+		logo: assets.instagram,
+		url: 'https://www.instagram.com/dev.ahmad_/',
+	},
+	{
+		id: 4,
+		title: 'X',
+		logo: assets.X,
+		url: 'https://x.com/Ahmadx_Ali',
 	},
 ]

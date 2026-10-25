@@ -1,6 +1,6 @@
 'use client';
 
-import { assets } from '@/assets/assets'
+import { assets, FooterLinks } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
@@ -17,35 +17,26 @@ const Footer = () => {
 			</div>
 
 			<div className='text-center sm:flex items-center select-none justify-between border-t border-darkBorder mx-[8%] mt-12 py-6'>
-				<p>&copy; 2026 Ahmad Ali Dev. All rights reserved.</p>
+				<p>&copy; 2026 Ahmad Ali Dev. All Rights Reserved.</p>
 				<ul className='flex items-center justify-center gap-10 mt-4 sm:mt-0'>
-					<li>
-						<a
-							href="https://github.com/AhmadAli-68"
-							target='_blank'
-							className='text-white hover:text-secondary transition-all duration-300 ease-in-out'
+					{FooterLinks.map(({ id, logo, url, title }) => (
+						<li
+							key={id}
 						>
-							Github
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.linkedin.com/in/ahmad-ali-dev/"
-							target='_blank'
-							className='text-white hover:text-secondary transition-all duration-300 ease-in-out'
-						>
-							LinkedIn
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://www.instagram.com/dev.ahmad_/"
-							target='_blank'
-							className='text-white hover:text-secondary transition-all duration-300 ease-in-out'
-						>
-							Instagram
-						</a>
-					</li>
+							<a
+								href={url}
+								target='_blank'
+								className='flex size-10 items-center justify-center rounded-full border-[0.5px] border-darkBorder hover:bg-darkHover/30 transition-all duration-500 hover:border-secondary'
+							>
+								<Image
+									src={logo}
+									width={20}
+									height={20}
+									alt={title}
+								/>
+							</a>
+						</li>
+					))}
 				</ul>
 			</div>
 		</div>
