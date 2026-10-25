@@ -20,13 +20,11 @@ const Footer = () => {
 				<p>&copy; 2026 Ahmad Ali Dev. All Rights Reserved.</p>
 				<ul className='flex items-center justify-center gap-10 mt-4 sm:mt-0'>
 					{FooterLinks.map(({ id, logo, url, title }) => (
-						<li
-							key={id}
-						>
+						<li key={id}>
 							<a
 								href={url}
 								target='_blank'
-								className='flex size-10 items-center justify-center rounded-full border-[0.5px] border-darkBorder hover:bg-darkHover/30 transition-all duration-500 hover:border-secondary'
+								className='flex size-10 items-center justify-center rounded-full border-2 border-darkBorder hover:bg-darkHover/30 transition-all duration-500 hover:border-secondary'
 							>
 								<Image
 									src={logo}
