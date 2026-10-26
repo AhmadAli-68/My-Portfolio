@@ -64,7 +64,7 @@ const page = () => {
               {Array.isArray(techStack) && techStack.map((tech) => (
                 <li
                   key={tech}
-                  className='text-sm text-secondary border-[0.5px] border-secondary/50 px-3 py-1 hover:-scale-105 duration-300 ease-in-out select-none cursor-pointer bg-darkHover/80 rounded-sm'
+                  className='text-sm text-secondary border-[0.5px] border-secondary/50 px-3 py-1 hover:scale-105 duration-300 ease-in-out select-none cursor-pointer bg-darkHover/80 rounded-sm'
                 >{tech}</li>
               ))}
             </ul>
@@ -85,7 +85,7 @@ const page = () => {
               </div>
 
               <div className='flex flex-col items-start lg:flex-row lg:items-center gap-2'>
-                <button className='flex items-center cursor-pointer gap-[5px] lg:text-sm text-xs  text-secondary p-1 rounded-md bg-darkHover/80 border-[0.5px] border-secondary/50'>
+                <button className='flex items-center cursor-pointer gap-[5px] lg:text-sm text-xs  text-secondary p-1 rounded-md bg-darkHover/80 border-[0.5px] border-secondary/50 hover:bg-darkHover/30 transition-colors duration-300 ease-in-out'>
                   <FaGithub className='w-4 h-4' />
                   <Link
                     href={repoLink}
@@ -96,7 +96,7 @@ const page = () => {
                   </Link>
                 </button>
 
-                <button className={!liveLink ? 'hidden' : 'flex items-center cursor-pointer gap-[5px] lg:text-sm text-xs text-secondary p-1 rounded-md bg-darkHover/80 border-[0.5px] border-secondary/50'}>
+                <button className={!liveLink ? 'hidden' : 'flex items-center cursor-pointer gap-[5px] lg:text-sm text-xs text-secondary p-1 rounded-md bg-darkHover/80 border-[0.5px] border-secondary/50 hover:bg-darkHover/30 transition-colors duration-300 ease-in-out'}>
                   {liveLink && (
                     <>
                       <ExternalLink className='w-4 h-4' />
