@@ -60,7 +60,7 @@ const Work = () => {
 							{Array.isArray(techStack) && techStack.map((tech) => (
 								<li
 									key={tech}
-									className='text-sm text-secondary border-[0.5px] border-secondary/50 px-3 py-1 hover:-translate-y-1 duration-300 ease-in-out select-none cursor-pointer bg-darkHover/80 rounded-md'
+									className='text-sm text-secondary border-[0.5px] border-secondary/50 px-3 py-1 hover:scale-105 duration-300 ease-in-out select-none cursor-pointer bg-darkHover/80 rounded-sm'
 								>{tech}</li>
 							))}
 						</ul>
