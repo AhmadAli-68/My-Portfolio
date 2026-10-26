@@ -83,7 +83,7 @@ const About = () => {
 						transition={{ duration: 0.5, delay: 1.3 }}
 						viewport={{ once: true }}
 
-						className='my-6 font-georama'>Languages and Tools</motion.h4>
+						className='my-6 max-lg:text-center font-semibold font-georama'>Languages and Tools</motion.h4>
 
 					<motion.div
 						initial={{ opacity: 0 }}
