@@ -83,6 +83,7 @@ const Navbar = () => {
 							>
 								{menu.title}
 								<ArrowRight
+									style={{ transitionDelay: Open ? `${120 + index * 60}ms` : "0ms" }}
 									className="w-5 opacity-0 -translate-x-2 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100"
 								/>
 							</Link>
