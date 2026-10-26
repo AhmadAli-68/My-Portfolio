@@ -65,15 +65,13 @@ const About = () => {
 
 						className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
 						{infoList.map(({ iconDark, title, description }, index) => (
-							<motion.li
-								whileHover={{ scale: 1.05 }}
-
+							<li
 								className='bg-darkHover/30 border-[0.5px] border-darkBorder rounded-xl p-6 cursor-pointer hover:-translate-y-1 transition-all duration-500 ease-in-out hover:shadow-black hover:shadow-secondary'
 								key={index}>
 								<Image src={iconDark} alt={title} className='w-8 mt-3' />
 								<h3 className='my-4 font-semibold text-white'>{title}</h3>
 								<p className='text-sm text-secondary'>{description}</p>
-							</motion.li>
+							</li>
 						))}
 					</motion.ul>
 

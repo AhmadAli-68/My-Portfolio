@@ -44,9 +44,7 @@ const Services = () => {
 
 				className='grid grid-cols-auto gap-6 my-10'>
 				{serviceData.map(({ icon, title, description, link }, index) => (
-					<motion.div
-						whileHover={{ scale: 1.05 }}
-
+					<div
 						key={index}
 						className='bg-darkHover/30 border-[0.5px] border-darkBorder rounded-lg px-8 py-12 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out cursor-pointer hover:-translate-y-1'
 					>
@@ -56,7 +54,7 @@ const Services = () => {
 						<a href={link} className='flex items-center gap-2 text-sm mt-5'>
 							Read more <Image src={assets.right_arrow_bold_dark} alt='right-arrow' className='w-4' />
 						</a>
-					</motion.div>
+					</div>
 				))}
 			</motion.div>
 		</motion.div>
