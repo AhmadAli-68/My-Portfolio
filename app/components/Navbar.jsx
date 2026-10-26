@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { assets, navLinks } from '@/assets/assets'
-import { ArrowUpRight, X } from 'lucide-react'
+import { ArrowUpRight, ArrowRight, X } from 'lucide-react'
 import Link from 'next/link';
 
 const Navbar = () => {
@@ -77,11 +77,14 @@ const Navbar = () => {
 							<Link
 								href={menu.link}
 								style={{ transitionDelay: Open ? `${120 + index * 60}ms` : "0ms" }}
-								className={`py-2 px-3 rounded-lg inline-block hover:bg-darkHover/30 hover:text-secondary hover:translate-x-0.5 w-full transition-all ease-in-out duration-300 ${Open ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
+								className={`group flex items-center justify-between py-2 px-3 rounded-lg hover:bg-darkHover/30 hover:text-secondary hover:translate-x-0.5 w-full transition-all ease-in-out duration-300 ${Open ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
 									}`}
 								onClick={() => setOpen(false)}
 							>
 								{menu.title}
+								<ArrowRight
+									className="w-5 opacity-0 -translate-x-2 transition-all duration-300 ease-in-out group-hover:translate-x-0 group-hover:opacity-100"
+								/>
 							</Link>
 						</li>
 					))}
