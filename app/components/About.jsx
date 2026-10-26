@@ -10,6 +10,7 @@ const About = () => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1 }}
+			viewport={{ once: true }}
 
 			id='about'
 			className='w-full px-[12%] py-10 scroll-mt-20'>
@@ -17,12 +18,14 @@ const About = () => {
 				initial={{ opacity: 0, y: -20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5, delay: 0.3 }}
+				viewport={{ once: true }}
 
 				className='text-center text-secondary mb-2 text-lg font-georama'>Introduction</motion.h4>
 			<motion.h2
 				initial={{ opacity: 0, y: -20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5, delay: 0.5 }}
+				viewport={{ once: true }}
 
 				className='text-center text-secondary font-semibold text-5xl font-georama'>About Me</motion.h2>
 
@@ -30,12 +33,14 @@ const About = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.8 }}
+				viewport={{ once: true }}
 
 				className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
 				<motion.div
 					initial={{ opacity: 0, scale: 0.9 }}
 					whileInView={{ opacity: 1, scale: 1 }}
 					transition={{ duration: 0.6 }}
+					viewport={{ once: true }}
 
 					className='w-64 border-[0.5px] border-darkBorder sm:w-80 rounded-3xl max-w-none'>
 					<Image src={assets.user_image} alt='user' className='w-full rounded-3xl' />
@@ -45,6 +50,7 @@ const About = () => {
 					initial={{ opacity: 0 }}
 					whileInView={{ opacity: 1 }}
 					transition={{ duration: 0.6, delay: 0.8 }}
+					viewport={{ once: true }}
 
 					className='flex-1'>
 					<p className='mb-10 max-w-2xl font-georama'>
@@ -55,6 +61,7 @@ const About = () => {
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						transition={{ duration: 0.8, delay: 1 }}
+						viewport={{ once: true }}
 
 						className='grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl'>
 						{infoList.map(({ iconDark, title, description }, index) => (
@@ -74,6 +81,7 @@ const About = () => {
 						initial={{ y: 20, opacity: 0 }}
 						whileInView={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.5, delay: 1.3 }}
+						viewport={{ once: true }}
 
 						className='my-6 font-georama'>Languages and Tools</motion.h4>
 
@@ -81,6 +89,7 @@ const About = () => {
 						initial={{ opacity: 0 }}
 						whileInView={{ opacity: 1 }}
 						transition={{ duration: 0.5, delay: 1.1 }}
+						viewport={{ once: true }}
 
 						className='flex justify-center items-center absolute mx-auto h-auto overflow-hidden max-w-2xl max-md:max-w-3/4 max-sm:max-w-[375px]'
 					>

@@ -8,6 +8,7 @@ const Services = () => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1 }}
+			viewport={{ once: true }}
 
 			id='services' className='w-full px-[12%] py-10 scroll-mt-20'>
 
@@ -15,6 +16,7 @@ const Services = () => {
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.3 }}
+				viewport={{ once: true }}
 
 				className='text-center mb-2 text-secondary text-lg font-georama'>What I offer</motion.h4>
 
@@ -22,6 +24,7 @@ const Services = () => {
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.5 }}
+				viewport={{ once: true }}
 
 				className='text-center font-semibold text-secondary text-5xl font-georama'>My Services</motion.h2>
 
@@ -29,6 +32,7 @@ const Services = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.7 }}
+				viewport={{ once: true }}
 
 				className='text-center max-w-2xl mx-auto mt-5 mb-12 font-georama'>I am a full stack developer from Lahore, Pakistan with 1 year of experience in multiple companies Like NexSkill - Be Productive and P2P Clouds.</motion.p>
 
@@ -36,6 +40,7 @@ const Services = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.9 }}
+				viewport={{ once: true }}
 
 				className='grid grid-cols-auto gap-6 my-10'>
 				{serviceData.map(({ icon, title, description, link }, index) => (

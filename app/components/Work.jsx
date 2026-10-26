@@ -12,6 +12,7 @@ const Work = () => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1 }}
+			viewport={{ once: true }}
 
 			id='work' className='w-full px-[10%] py-10 scroll-mt-20'>
 
@@ -19,6 +20,7 @@ const Work = () => {
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.3 }}
+				viewport={{ once: true }}
 
 				className='text-center text-secondary mb-2 text-lg font-georama'>My Portfolio</motion.h4>
 
@@ -26,6 +28,7 @@ const Work = () => {
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.5 }}
+				viewport={{ once: true }}
 
 				className='text-center text-secondary font-semibold text-5xl font-georama'>Featured Projects</motion.h2>
 
@@ -33,6 +36,7 @@ const Work = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.7 }}
+				viewport={{ once: true }}
 
 				className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in full stack development.</motion.p>
 
@@ -40,12 +44,17 @@ const Work = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.9 }}
+				viewport={{ once: true }}
 
 				className='grid grid-cols-1 md:grid-cols-2 my-5 gap-6'>
 				{workData.slice(0, 4).map(({ id, title, description, frontend_backend_Stack, techStack, repoLink, liveLink }) => (
 					<motion.div
-						key={id}
+						initial={{ opacity: 0 }}
+						whileInView={{ opacity: 1 }}
+						transition={{ duration: 0.7, delay: 1.0 }}
+						viewport={{ once: true }}
 
+						key={id}
 						className='w-full h-fit py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-1 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out'
 					>
 						<h2 className='text-xl font-semibold text-secondary mb-3'>{title}</h2>
@@ -116,6 +125,7 @@ const Work = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 1.1 }}
+				viewport={{ once: true }}
 
 				href="/projects"
 				className='w-max flex items-center bg-darkTheme justify-center gap-2 border-[0.5px] rounded-full py-3 px-10 mx-auto my-20 transition-all duration-500 ease-in-out text-white border-darkBorder hover:bg-darkHover/30 hover:text-secondary'

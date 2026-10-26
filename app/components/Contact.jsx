@@ -38,6 +38,7 @@ const Contact = () => {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1 }}
+			viewport={{ once: true }}
 
 			id='contact' className='w-full px-[12%] py-10 scroll-mt-20'>
 
@@ -45,6 +46,7 @@ const Contact = () => {
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 1, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.3 }}
+				viewport={{ once: true }}
 
 				className='text-center text-secondary mb-2 text-lg font-georama'>Connect With Me</motion.h4>
 
@@ -52,6 +54,7 @@ const Contact = () => {
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.5 }}
+				viewport={{ once: true }}
 
 				className='text-center text-secondary font-semibold text-5xl font-georama'>Get In Touch</motion.h2>
 
@@ -59,6 +62,7 @@ const Contact = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.7 }}
+				viewport={{ once: true }}
 
 				className='text-center max-w-2xl mx-auto mt-5 mb-12 font-georama'>I'd love to hear from you! If you have any questions, comments, or feedback, please fill the form below</motion.p>
 
@@ -66,6 +70,7 @@ const Contact = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.5, delay: 0.9 }}
+				viewport={{ once: true }}
 
 				onSubmit={onSubmit} className='max-w-2xl mx-auto'>
 				<div className='grid grid-cols-auto gap-6 mt-10 mb-8'>
@@ -74,6 +79,7 @@ const Contact = () => {
 						initial={{ x: -50, opacity: 0 }}
 						whileInView={{ x: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 1.1 }}
+						viewport={{ once: true }}
 
 						type="text"
 						className='flex-1 p-3 outline-none text-secondary border-[0.5px] border-darkBorder rounded-lg bg-darkHover/30'
@@ -83,6 +89,7 @@ const Contact = () => {
 						initial={{ x: 50, opacity: 0 }}
 						whileInView={{ x: 0, opacity: 1 }}
 						transition={{ duration: 0.6, delay: 1.2 }}
+						viewport={{ once: true }}
 
 						type="email"
 						className='flex-1 p-3 outline-none text-secondary border-[0.5px] border-darkBorder rounded-lg bg-darkHover/30'
@@ -93,6 +100,7 @@ const Contact = () => {
 					initial={{ y: 100, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					transition={{ duration: 0.6, delay: 1.3 }}
+					viewport={{ once: true }}
 
 					rows='6'
 					className='w-full p-4 outline-none resize-none text-secondary border-[0.5px] border-darkBorder rounded-lg mb-6 dark:bg-darkHover/30'
@@ -103,6 +111,7 @@ const Contact = () => {
 				<motion.button
 					whileHover={{ scale: 1.05 }}
 					transition={{ duration: 0.3 }}
+					viewport={{ once: true }}
 
 					className='py-3 px-8 flex items-center justify-between gap-2 bg-darkTheme hover:bg-darkHover/30 text-white rounded-full mx-auto duration-500 cursor-pointer border-[0.5px] border-darkBorder hover:text-secondary'
 					type='submit'>Submit Now <ArrowRight className='w-5' /></motion.button>

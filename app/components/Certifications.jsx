@@ -9,6 +9,7 @@ const Certifications = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      viewport={{ once: true }}
 
       id='certifications'
       className='w-full px-[8%] py-10 scroll-mt-20'
@@ -17,6 +18,7 @@ const Certifications = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
 
         className='text-lg text-center text-secondary font-georama mb-2'
       >
@@ -27,6 +29,7 @@ const Certifications = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
 
         className='font-georama text-center text-5xl text-secondary font-semibold'
       >
@@ -37,6 +40,7 @@ const Certifications = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
+        viewport={{ once: true }}
 
         className='text-center max-w-2xl mx-auto mt-5 mb-12'
       >
@@ -47,6 +51,7 @@ const Certifications = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
+        viewport={{ once: true }}
 
         className='grid grid-cols-1 md:grid-cols-2 gap-6 my-5'
       >

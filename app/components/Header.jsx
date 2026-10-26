@@ -101,6 +101,8 @@ const Header = () => {
 				initial={{ scale: 0 }}
 				whileInView={{ scale: 1 }}
 				transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
+				viewport={{ once: true }}
+
 				className='border-[0.5px] border-darkBorder rounded-full'
 			>
 				<Image src={assets.profile_img} alt='profile' className='rounded-full w-40' />
@@ -110,6 +112,7 @@ const Header = () => {
 				initial={{ y: -30, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.8, delay: 0.5 }}
+				viewport={{ once: true }}
 
 				className='flex items-end text-secondary text-xl md:text-2xl mb-3 select-none'
 				ref={subtitleRef}
@@ -125,6 +128,7 @@ const Header = () => {
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.7 }}
+				viewport={{ once: true }}
 
 				className='text-4xl md:text-6xl text-secondary lg:text-7xl font-georama select-none'
 				ref={titleRef}
@@ -139,6 +143,7 @@ const Header = () => {
 				initial={{ y: -20, opacity: 0 }}
 				whileInView={{ y: 0, opacity: 1 }}
 				transition={{ duration: 0.6, delay: 0.3 }}
+				viewport={{ once: true }}
 
 				className='max-w-2xl mb-2 mx-auto font-georama'>
 				I am a Full Stack Web Developer from Lahore, Pakistan with 2+ year of experience in full stack development.
@@ -149,6 +154,7 @@ const Header = () => {
 					initial={{ y: 30, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					transition={{ duration: 0.6, delay: 1 }}
+					viewport={{ once: true }}
 
 					href="#contact"
 					className='px-10 py-3 border border-darkBorder rounded-full bg-darkTheme text-white flex items-center gap-2 hover:text-hoverText transition-all duration-300 ease-in-out'
@@ -159,6 +165,7 @@ const Header = () => {
 					initial={{ y: 30, opacity: 0 }}
 					whileInView={{ y: 0, opacity: 1 }}
 					transition={{ duration: 0.6, delay: 1.2 }}
+					viewport={{ once: true }}
 
 					href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
 					className='px-10 py-3 border-[0.5px] border-darkBorder rounded-full flex items-center gap-2 text-secondary bg-darkTheme hover:bg-secondary hover:text-black transition-all duration-300 ease-in-out'
