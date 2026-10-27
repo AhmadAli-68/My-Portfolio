@@ -14,6 +14,7 @@ const page = () => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      viewport={{ once: true }}
 
       id='work' className='w-full px-[10%] mt-30 py-10 scroll-mt-20'>
 
@@ -21,6 +22,7 @@ const page = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
 
         className='text-center text-secondary mb-2 text-lg font-georama'>My Portfolio</motion.h4>
 
@@ -28,6 +30,7 @@ const page = () => {
         initial={{ y: -20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true }}
 
         className='text-center text-secondary font-semibold text-5xl font-georama'>All Projects</motion.h2>
 
@@ -35,6 +38,7 @@ const page = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
+        viewport={{ once: true }}
 
         className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>Explore my work — from interactive interfaces to full-stack applications built with modern technologies.</motion.p>
 
@@ -42,6 +46,7 @@ const page = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.9 }}
+        viewport={{ once: true }}
 
         className='grid grid-cols-1 md:grid-cols-2 my-5 gap-6'>
         {workData.map(({ id, title, description, frontend_backend_Stack, techStack, repoLink, liveLink }) => (
