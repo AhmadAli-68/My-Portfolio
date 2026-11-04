@@ -159,7 +159,8 @@ const Header = () => {
 					href="#contact"
 					className='px-10 py-3 border border-darkBorder rounded-full bg-darkTheme text-white flex items-center gap-2 hover:text-hoverText transition-all duration-300 ease-in-out'
 				>
-					Contact me <ArrowRight alt='profile' className='w-5' /></motion.a>
+					Contact me <ArrowRight alt='profile' className='w-5' />
+				</motion.a>
 
 				<motion.a
 					initial={{ y: 30, opacity: 0 }}
@@ -170,7 +171,8 @@ const Header = () => {
 					href="/Ahmad-Ali-Resume-[Full-Stack-Web-Developer].docx" download
 					className='px-10 py-3 border-[0.5px] border-darkBorder rounded-full flex items-center gap-2 text-secondary bg-darkTheme hover:bg-secondary hover:text-black transition-all duration-300 ease-in-out'
 				>
-					My Resume <DownloadIcon className='w-5' /></motion.a>
+					My Resume <DownloadIcon className='w-5' />
+				</motion.a>
 			</div>
 		</div >
 	)
