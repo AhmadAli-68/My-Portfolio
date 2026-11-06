@@ -1,6 +1,4 @@
-import { assets } from '@/assets/assets'
 import React, { useState } from 'react'
-import Image from 'next/image'
 import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import toast from 'react-hot-toast'
@@ -114,7 +112,11 @@ const Contact = () => {
 					viewport={{ once: true }}
 
 					className='py-3 px-8 flex items-center justify-between gap-2 bg-darkTheme hover:bg-darkHover/30 text-white rounded-full mx-auto duration-500 cursor-pointer border-[0.5px] border-darkBorder hover:text-secondary'
-					type='submit'>Submit Now <ArrowRight className='w-5' /></motion.button>
+					type='submit'
+				>
+					Submit Now
+					<ArrowRight className='w-5' />
+				</motion.button>
 
 				<p className='mt-4 mx-auto flex items-center justify-center'>{result}</p>
 			</motion.form>

@@ -58,14 +58,10 @@ const Work = () => {
 						className='w-full h-fit py-4 px-6 bg-darkHover/30 rounded-lg border-[0.5px] border-darkBorder cursor-pointer hover:-translate-y-1 hover:shadow-black hover:shadow-secondary transition-all duration-500 ease-in-out'
 					>
 						<h2 className='text-xl font-semibold text-secondary mb-3'>{title}</h2>
-
 						<hr className='text-darkBorder mb-4' />
-
 						<p className='text-white text-sm max-w-2xl mb-4'>{description}</p>
 
-						<ul
-							className='flex flex-wrap gap-2 max-w-[26rem] mb-4'
-						>
+						<ul className='flex flex-wrap gap-2 max-w-[26rem] mb-4'>
 							{Array.isArray(techStack) && techStack.map((tech) => (
 								<li
 									key={tech}
@@ -129,7 +125,6 @@ const Work = () => {
 
 				href="/projects"
 				className='w-max flex items-center bg-darkTheme justify-center gap-2 border-[0.5px] rounded-full py-3 px-10 mx-auto my-20 transition-all duration-500 ease-in-out text-white border-darkBorder hover:bg-darkHover/30 hover:text-secondary'
-				// target="_blank"
 				rel="noopener noreferrer">
 				See all Projects <ArrowRight className='w-5' />
 			</motion.a>

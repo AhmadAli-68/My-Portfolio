@@ -7,17 +7,8 @@ import { ArrowUpRight, ArrowRight, X } from 'lucide-react'
 import Link from 'next/link';
 
 const Navbar = () => {
-
 	const [isScroll, setIsScroll] = useState(false)
 	const [Open, setOpen] = useState(false);
-
-	// const sideMenuRef = useRef()
-	// const openMenu = () => {
-	// 	sideMenuRef.current.style.transform = "translateX(-16rem)"
-	// }
-	// const closeMenu = () => {
-	// 	sideMenuRef.current.style.transform = "translateX(16rem)"
-	// }
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -39,7 +30,6 @@ const Navbar = () => {
 				</Link>
 
 				<ul className={`hidden md:flex items-center gap-6 lg:gap-2 rounded-full px-2 py-3 ${isScroll ? "" : "bg-darkTheme/50 backdrop-blur-lg shadow-sm border-[0.5px] border-darkBorder"} `}>
-
 					{navLinks.map(({ id, link, title }) => (
 						<li key={id}>
 							<Link
@@ -54,7 +44,9 @@ const Navbar = () => {
 
 				<div className='flex items-center gap-4'>
 
-					<a className='hidden lg:flex items-center gap-3 px-10 py-2.5 bg-darkTheme/50 backdrop-blur-lg border border-darkBorder hover:text-hoverText hover:bg-darkHover/30 rounded-full ml-4 transition-all duration-300 ease-in-out' href="#contact">Contact <ArrowUpRight alt='arrow' className='w-5' /></a>
+					<a className='hidden lg:flex items-center gap-3 px-10 py-2.5 bg-darkTheme/50 backdrop-blur-lg border border-darkBorder hover:text-hoverText hover:bg-darkHover/30 rounded-full ml-4 transition-all duration-300 ease-in-out' href="#contact">
+						Contact <ArrowUpRight alt='arrow' className='w-5' />
+					</a>
 
 					<button className='block md:hidden ml-3' onClick={() => setOpen(true)}>
 						<Image src={assets.menu_white} alt='menu' className='w-11 cursor-pointer bg-darkTheme border-[0.5px] border-darkBorder p-2 rounded-lg' />
